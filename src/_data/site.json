@@ -1,0 +1,20 @@
+{
+  "name": "Jans Holzstube",
+  "untertitel": "Handgebaute Holzdeko aus der Nachbarschaft",
+  "einleitung": "Holzsterne, Lattenbäume und kleine Lichter für Vorgarten, Haustür und Fensterbank – gebaut in meiner Werkstatt, gebracht bis vor deine Tür.",
+  "whatsapp": "0170 0000000",
+  "telefon": "0170 0000000",
+  "liefertermine": [
+    { "titel": "Früh dran", "bestellen_bis": "1. November", "lieferung_bis": "15. November", "text": "Damit die Lichter rechtzeitig vor dem ersten Advent hängen." },
+    { "titel": "Zum 2. Advent", "bestellen_bis": "15. November", "lieferung_bis": "6. Dezember", "text": "Für alle, die es gemütlich angehen." }
+  ],
+  "ueberFoto": "",
+  "ueber": "Moin, ich bin Jan. Letztes Jahr habe ich für meine Mutter einen großen Holzstern gebaut – und weil das so viel Spaß gemacht hat, baue ich jetzt auch für die Nachbarschaft. Alles wird von mir per Hand gesägt, geschraubt und lasiert.",
+  "impressum": {
+    "name": "Jan Kettler",
+    "strasse": "Musterstraße 1",
+    "ort": "49406 Barnstorf",
+    "kontakt": "Telefon / WhatsApp: 0170 0000000"
+  },
+  "werkstatt": { "benutzer": "Jan", "passwort": "1234" }
+}

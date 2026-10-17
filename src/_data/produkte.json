@@ -1,0 +1,3109 @@
+[
+ {
+  "id": "holzstern",
+  "name": "Holzstern",
+  "untertitel": "Der Klassiker aus fünf Spitzen",
+  "beschreibung": "Fünf verschraubte Spitzen aus Dachlatten, lasiert und wetterfest. Mit Lichterkette ein echter Hingucker im Vorgarten oder an der Hauswand.",
+  "kategorie": "draussen",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "advent",
+  "varianten": [
+   {
+    "id": "s",
+    "name": "S",
+    "masse": "ca. 81 × 76 cm",
+    "preis": {
+     "ohne": 25,
+     "mit": 35
+    },
+    "stunden": 1.0,
+    "licht": [
+     {
+      "material": "lichterkette5",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Schenkel (vordere Lage)",
+      "material": "dachlatte",
+      "laenge": 340,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         45.1,
+         598.2,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -72.0
+        ]
+       },
+       {
+        "p": [
+         -236.2,
+         459.4,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -0.0
+        ]
+       },
+       {
+        "p": [
+         -191.1,
+         148.9,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         72.0
+        ]
+       },
+       {
+        "p": [
+         118.1,
+         95.8,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         144.0
+        ]
+       },
+       {
+        "p": [
+         264.1,
+         373.5,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -144.0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Schenkel (hintere Lage)",
+      "material": "dachlatte",
+      "laenge": 340,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         -45.1,
+         598.2,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -108.0
+        ]
+       },
+       {
+        "p": [
+         -264.1,
+         373.5,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -36.0
+        ]
+       },
+       {
+        "p": [
+         -118.1,
+         95.8,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         36.0
+        ]
+       },
+       {
+        "p": [
+         191.1,
+         148.9,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         108.0
+        ]
+       },
+       {
+        "p": [
+         236.2,
+         459.4,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -180.0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 20
+     },
+     {
+      "material": "winkel",
+      "anzahl": 5
+     }
+    ],
+    "schritte": [
+     "Alle 10 Schenkel auf 340 mm ablängen. An einem Ende 18° Gehrung schneiden – das wird die Spitze.",
+     "Kanten leicht anschleifen und alle Teile 2× lasieren (vorher! Später kommt man schlecht an die Überlappungen).",
+     "Fünf Spitzen bauen: je zwei Schenkel so übereinanderlegen, dass sie einen Winkel von 36° bilden (Spitze nach oben), mit 2 Schrauben 4×40 verschrauben.",
+     "Die fünf Spitzen auf dem Boden zum Stern auslegen. An jedem inneren Knick überlappen die Schenkel – dort verschrauben und hinten zusätzlich einen Winkel setzen.",
+     "Maße kontrollieren: Alle Spitzen sollten gleich weit von der Mitte entfernt sein. Kleine Ungenauigkeiten der Säge gleichen die Überlappungen aus.",
+     "Zum Aufhängen hinten eine Ringschraube oder einen Bilderhaken setzen.",
+     "Lichterkette entlang der Kanten führen, mit Kabelclips oder kleinen Krampen befestigen."
+    ]
+   },
+   {
+    "id": "m",
+    "name": "M",
+    "masse": "ca. 139 × 131 cm",
+    "preis": {
+     "ohne": 39,
+     "mit": 55
+    },
+    "stunden": 1.5,
+    "licht": [
+     {
+      "material": "lichterkette10",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Schenkel (vordere Lage)",
+      "material": "dachlatte",
+      "laenge": 560,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         79.1,
+         1041.4,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -72.0
+        ]
+       },
+       {
+        "p": [
+         -414.2,
+         797.9,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -0.0
+        ]
+       },
+       {
+        "p": [
+         -335.1,
+         253.5,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         72.0
+        ]
+       },
+       {
+        "p": [
+         207.1,
+         160.5,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         144.0
+        ]
+       },
+       {
+        "p": [
+         463.1,
+         647.5,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -144.0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Schenkel (hintere Lage)",
+      "material": "dachlatte",
+      "laenge": 560,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         -79.1,
+         1041.4,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -108.0
+        ]
+       },
+       {
+        "p": [
+         -463.1,
+         647.5,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -36.0
+        ]
+       },
+       {
+        "p": [
+         -207.1,
+         160.5,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         36.0
+        ]
+       },
+       {
+        "p": [
+         335.1,
+         253.5,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         108.0
+        ]
+       },
+       {
+        "p": [
+         414.2,
+         797.9,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -180.0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Stützlatte (Aufsteller)",
+      "material": "dachlatte",
+      "laenge": 705,
+      "zuschnitt": "unten 18° schräg, damit sie flach aufliegt",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         340.2,
+         -120.9
+        ],
+        "r": [
+         0,
+         -18,
+         90
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 20
+     },
+     {
+      "material": "winkel",
+      "anzahl": 10
+     },
+     {
+      "material": "scharnier",
+      "anzahl": 1
+     }
+    ],
+    "schritte": [
+     "Alle 10 Schenkel auf 560 mm ablängen. An einem Ende 18° Gehrung schneiden – das wird die Spitze.",
+     "Kanten leicht anschleifen und alle Teile 2× lasieren (vorher! Später kommt man schlecht an die Überlappungen).",
+     "Fünf Spitzen bauen: je zwei Schenkel so übereinanderlegen, dass sie einen Winkel von 36° bilden (Spitze nach oben), mit 2 Schrauben 4×40 verschrauben.",
+     "Die fünf Spitzen auf dem Boden zum Stern auslegen. An jedem inneren Knick überlappen die Schenkel – dort verschrauben und hinten zusätzlich einen Winkel setzen.",
+     "Maße kontrollieren: Alle Spitzen sollten gleich weit von der Mitte entfernt sein. Kleine Ungenauigkeiten der Säge gleichen die Überlappungen aus.",
+     "Stützlatte mit Scharnier hinten an der oberen Spitze befestigen, damit der Stern frei steht.",
+     "Lichterkette entlang der Kanten führen, mit Kabelclips oder kleinen Krampen befestigen."
+    ]
+   },
+   {
+    "id": "xxl",
+    "name": "XXL",
+    "masse": "ca. 217 × 206 cm",
+    "preis": {
+     "ohne": 59,
+     "mit": 89
+    },
+    "stunden": 2.0,
+    "licht": [
+     {
+      "material": "lichterkette10",
+      "anzahl": 2
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Schenkel (vordere Lage)",
+      "material": "dachlatte",
+      "laenge": 860,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         125.5,
+         1645.8,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -72.0
+        ]
+       },
+       {
+        "p": [
+         -657.0,
+         1259.6,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -0.0
+        ]
+       },
+       {
+        "p": [
+         -531.5,
+         396.2,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         72.0
+        ]
+       },
+       {
+        "p": [
+         328.5,
+         248.7,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         144.0
+        ]
+       },
+       {
+        "p": [
+         734.5,
+         1021.0,
+         12
+        ],
+        "r": [
+         0,
+         0,
+         -144.0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Schenkel (hintere Lage)",
+      "material": "dachlatte",
+      "laenge": 860,
+      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "instanzen": [
+       {
+        "p": [
+         -125.5,
+         1645.8,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -108.0
+        ]
+       },
+       {
+        "p": [
+         -734.5,
+         1021.0,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -36.0
+        ]
+       },
+       {
+        "p": [
+         -328.5,
+         248.7,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         36.0
+        ]
+       },
+       {
+        "p": [
+         531.5,
+         396.2,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         108.0
+        ]
+       },
+       {
+        "p": [
+         657.0,
+         1259.6,
+         36
+        ],
+        "r": [
+         0,
+         0,
+         -180.0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Stützlatte (Aufsteller)",
+      "material": "dachlatte",
+      "laenge": 1120,
+      "zuschnitt": "unten 18° schräg, damit sie flach aufliegt",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         537.6,
+         -185.0
+        ],
+        "r": [
+         0,
+         -18,
+         90
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 20
+     },
+     {
+      "material": "winkel",
+      "anzahl": 10
+     },
+     {
+      "material": "scharnier",
+      "anzahl": 1
+     }
+    ],
+    "schritte": [
+     "Alle 10 Schenkel auf 860 mm ablängen. An einem Ende 18° Gehrung schneiden – das wird die Spitze.",
+     "Kanten leicht anschleifen und alle Teile 2× lasieren (vorher! Später kommt man schlecht an die Überlappungen).",
+     "Fünf Spitzen bauen: je zwei Schenkel so übereinanderlegen, dass sie einen Winkel von 36° bilden (Spitze nach oben), mit 2 Schrauben 4×40 verschrauben.",
+     "Die fünf Spitzen auf dem Boden zum Stern auslegen. An jedem inneren Knick überlappen die Schenkel – dort verschrauben und hinten zusätzlich einen Winkel setzen.",
+     "Maße kontrollieren: Alle Spitzen sollten gleich weit von der Mitte entfernt sein. Kleine Ungenauigkeiten der Säge gleichen die Überlappungen aus.",
+     "Stützlatte mit Scharnier hinten an der oberen Spitze befestigen, damit der Stern frei steht.",
+     "Lichterkette entlang der Kanten führen, mit Kabelclips oder kleinen Krampen befestigen."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "lattenbaum",
+  "name": "Lattenbaum",
+  "untertitel": "Tannenbaum aus versetzten Latten",
+  "beschreibung": "Ein Rahmen-Tannenbaum mit versetzten Stufen. Klein für Sideboard und Fensterbank, groß als Hingucker neben der Haustür.",
+  "kategorie": "draussen",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "advent",
+  "varianten": [
+   {
+    "id": "klein",
+    "name": "Klein · für drinnen",
+    "masse": "ca. 56 × 61 cm",
+    "preis": {
+     "ohne": 25,
+     "mit": 32
+    },
+    "stunden": 1.0,
+    "licht": [
+     {
+      "material": "lichterkette_batt",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Seitenteil oben rechts (lang)",
+      "material": "dachlatte",
+      "laenge": 245,
+      "zuschnitt": "oben 22,5° Gehrung (Spitze), unten 22,5° waagerecht abschneiden",
+      "instanzen": [
+       {
+        "p": [
+         44.6,
+         512.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Seitenteil",
+      "material": "dachlatte",
+      "laenge": 210,
+      "zuschnitt": "beide Enden 22,5° (Enden stehen waagerecht)",
+      "instanzen": [
+       {
+        "p": [
+         -51.3,
+         496.8,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         -138.5,
+         348.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         -225.7,
+         201.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         138.5,
+         348.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       },
+       {
+        "p": [
+         225.7,
+         201.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Bodenlatte",
+      "material": "dachlatte",
+      "laenge": 565,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         72.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Standfuß (quer)",
+      "material": "dachlatte",
+      "laenge": 245,
+      "zuschnitt": "gerade, Kanten leicht brechen",
+      "instanzen": [
+       {
+        "p": [
+         -169.5,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       },
+       {
+        "p": [
+         169.5,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben460",
+      "anzahl": 16
+     },
+     {
+      "material": "winkel",
+      "anzahl": 2
+     }
+    ],
+    "schritte": [
+     "Zuerst eine Probe-Latte schneiden: Kappsäge auf 22,5° stellen und mit einer Schmiege prüfen. Bei einer ungenauen Säge lieber einmal anzeichnen und nachkorrigieren.",
+     "Alle Teile laut Stückliste zuschneiden. Die Seitenteile haben an beiden Enden 22,5°, damit die Enden später waagerecht stehen.",
+     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (das lange rechte überlappt das linke), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenbreite nach außen versetzt.",
+     "Die Stufen von außen mit je 2 Schrauben 4×60 durch die überlappenden Stücke verschrauben.",
+     "Bodenlatte unten anschrauben, die Seiten stehen darauf.",
+     "Die beiden Standfüße quer unter die Bodenlatte schrauben (vorne/hinten gleich weit überstehen lassen).",
+     "Schleifen, 2× lasieren, trocknen lassen, Lichterkette im Zickzack hinter dem Rahmen spannen."
+    ]
+   },
+   {
+    "id": "gross",
+    "name": "Groß · für draußen",
+    "masse": "ca. 98 × 112 cm",
+    "preis": {
+     "ohne": 49,
+     "mit": 65
+    },
+    "stunden": 1.75,
+    "licht": [
+     {
+      "material": "lichterkette10",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Seitenteil oben rechts (lang)",
+      "material": "dachlatte",
+      "laenge": 490,
+      "zuschnitt": "oben 22,5° Gehrung (Spitze), unten 22,5° waagerecht abschneiden",
+      "instanzen": [
+       {
+        "p": [
+         78.1,
+         940.2,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Seitenteil",
+      "material": "dachlatte",
+      "laenge": 420,
+      "zuschnitt": "beide Enden 22,5° (Enden stehen waagerecht)",
+      "instanzen": [
+       {
+        "p": [
+         -91.5,
+         907.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         -243.7,
+         602.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         -396.0,
+         298.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         67.5
+        ]
+       },
+       {
+        "p": [
+         243.7,
+         602.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       },
+       {
+        "p": [
+         396.0,
+         298.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         112.5
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Bodenlatte",
+      "material": "dachlatte",
+      "laenge": 985,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         72.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Standfuß (quer)",
+      "material": "dachlatte",
+      "laenge": 490,
+      "zuschnitt": "gerade, Kanten leicht brechen",
+      "instanzen": [
+       {
+        "p": [
+         -295.5,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       },
+       {
+        "p": [
+         295.5,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben460",
+      "anzahl": 16
+     },
+     {
+      "material": "winkel",
+      "anzahl": 2
+     }
+    ],
+    "schritte": [
+     "Zuerst eine Probe-Latte schneiden: Kappsäge auf 22,5° stellen und mit einer Schmiege prüfen. Bei einer ungenauen Säge lieber einmal anzeichnen und nachkorrigieren.",
+     "Alle Teile laut Stückliste zuschneiden. Die Seitenteile haben an beiden Enden 22,5°, damit die Enden später waagerecht stehen.",
+     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (das lange rechte überlappt das linke), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenbreite nach außen versetzt.",
+     "Die Stufen von außen mit je 2 Schrauben 4×60 durch die überlappenden Stücke verschrauben.",
+     "Bodenlatte unten anschrauben, die Seiten stehen darauf.",
+     "Die beiden Standfüße quer unter die Bodenlatte schrauben (vorne/hinten gleich weit überstehen lassen).",
+     "Schleifen, 2× lasieren, trocknen lassen, Lichterkette im Zickzack hinter dem Rahmen spannen."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tannen",
+  "name": "Tannen-Silhouetten",
+  "untertitel": "Drei Tannen für Beet und Eingang",
+  "beschreibung": "Ausgesägte Tannen aus Holzplatte, in drei Größen. Einfach mit dem Erdspieß in Rasen oder Beet stecken.",
+  "kategorie": "draussen",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "advent",
+  "varianten": [
+   {
+    "id": "set",
+    "name": "3er-Set (50 / 80 / 120 cm)",
+    "masse": "50, 80 und 120 cm hoch",
+    "preis": {
+     "ohne": 89,
+     "mit": 109
+    },
+    "stunden": 2.0,
+    "licht": [
+     {
+      "material": "lichterkette5",
+      "anzahl": 3
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Tanne 50 cm",
+      "material": "leimholz",
+      "laenge": 500,
+      "breite": 300,
+      "profil": [
+       [
+        -21.0,
+        -250.0
+       ],
+       [
+        21.0,
+        -250.0
+       ],
+       [
+        21.0,
+        -205.0
+       ],
+       [
+        150.0,
+        -205.0
+       ],
+       [
+        60.0,
+        -50.0
+       ],
+       [
+        120.0,
+        -50.0
+       ],
+       [
+        42.0,
+        90.0
+       ],
+       [
+        90.0,
+        90.0
+       ],
+       [
+        0,
+        250.0
+       ],
+       [
+        -90.0,
+        90.0
+       ],
+       [
+        -42.0,
+        90.0
+       ],
+       [
+        -120.0,
+        -50.0
+       ],
+       [
+        -60.0,
+        -50.0
+       ],
+       [
+        -150.0,
+        -205.0
+       ],
+       [
+        -21.0,
+        -205.0
+       ]
+      ],
+      "zuschnitt": "Umriss mit der Stichsäge aussägen (Vorlage aufzeichnen)",
+      "instanzen": [
+       {
+        "p": [
+         -605.0,
+         250.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Tanne 80 cm",
+      "material": "leimholz",
+      "laenge": 800,
+      "breite": 450,
+      "profil": [
+       [
+        -31.5,
+        -400.0
+       ],
+       [
+        31.5,
+        -400.0
+       ],
+       [
+        31.5,
+        -328.0
+       ],
+       [
+        225.0,
+        -328.0
+       ],
+       [
+        90.0,
+        -80.0
+       ],
+       [
+        180.0,
+        -80.0
+       ],
+       [
+        63.0,
+        144.0
+       ],
+       [
+        135.0,
+        144.0
+       ],
+       [
+        0,
+        400.0
+       ],
+       [
+        -135.0,
+        144.0
+       ],
+       [
+        -63.0,
+        144.0
+       ],
+       [
+        -180.0,
+        -80.0
+       ],
+       [
+        -90.0,
+        -80.0
+       ],
+       [
+        -225.0,
+        -328.0
+       ],
+       [
+        -31.5,
+        -328.0
+       ]
+      ],
+      "zuschnitt": "Umriss mit der Stichsäge aussägen (Vorlage aufzeichnen)",
+      "instanzen": [
+       {
+        "p": [
+         -150.0,
+         400.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Tanne 120 cm",
+      "material": "leimholz",
+      "laenge": 1200,
+      "breite": 600,
+      "profil": [
+       [
+        -42.0,
+        -600.0
+       ],
+       [
+        42.0,
+        -600.0
+       ],
+       [
+        42.0,
+        -492.0
+       ],
+       [
+        300.0,
+        -492.0
+       ],
+       [
+        120.0,
+        -120.0
+       ],
+       [
+        240.0,
+        -120.0
+       ],
+       [
+        84.0,
+        216.0
+       ],
+       [
+        180.0,
+        216.0
+       ],
+       [
+        0,
+        600.0
+       ],
+       [
+        -180.0,
+        216.0
+       ],
+       [
+        -84.0,
+        216.0
+       ],
+       [
+        -240.0,
+        -120.0
+       ],
+       [
+        -120.0,
+        -120.0
+       ],
+       [
+        -300.0,
+        -492.0
+       ],
+       [
+        -42.0,
+        -492.0
+       ]
+      ],
+      "zuschnitt": "Umriss mit der Stichsäge aussägen (Vorlage aufzeichnen)",
+      "instanzen": [
+       {
+        "p": [
+         455.0,
+         600.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Erdspieß Tanne 50 cm",
+      "material": "dachlatte",
+      "laenge": 475,
+      "zuschnitt": "unten spitz zusägen (2× ca. 30°)",
+      "instanzen": [
+       {
+        "p": [
+         -605.0,
+         -12.5,
+         -21
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Erdspieß Tanne 80 cm",
+      "material": "dachlatte",
+      "laenge": 610,
+      "zuschnitt": "unten spitz zusägen (2× ca. 30°)",
+      "instanzen": [
+       {
+        "p": [
+         -150.0,
+         55.0,
+         -21
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Erdspieß Tanne 120 cm",
+      "material": "dachlatte",
+      "laenge": 790,
+      "zuschnitt": "unten spitz zusägen (2× ca. 30°)",
+      "instanzen": [
+       {
+        "p": [
+         455.0,
+         145.0,
+         -21
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 12
+     }
+    ],
+    "schritte": [
+     "Tannen-Umriss auf die Platte zeichnen: Mittellinie ziehen, Stamm und drei Stufen mit Zollstock übertragen (Maße siehe Zeichnung).",
+     "Die Tannen sind so angeordnet, dass zwei Platten reichen (Zuschnittplan).",
+     "Mit der Stichsäge aussägen – für die Spitzen ein feines Kurvensägeblatt nehmen.",
+     "Kanten gut schleifen (Schleifpapier 120, dann 180) und besonders die Stirnkanten 3× lasieren, da zieht Wasser rein.",
+     "Erdspieß unten anspitzen und hinten mittig mit 4 Schrauben 4×40 anschrauben.",
+     "Optional: Lichterkette mit kleinen Clips entlang des Umrisses auf der Rückseite befestigen."
+    ]
+   },
+   {
+    "id": "einzeln",
+    "name": "Einzeln (120 cm)",
+    "masse": "ca. 60 × 120 cm",
+    "preis": {
+     "ohne": 49,
+     "mit": 59
+    },
+    "stunden": 1.0,
+    "licht": [
+     {
+      "material": "lichterkette5",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Tanne 120 cm",
+      "material": "leimholz",
+      "laenge": 1200,
+      "breite": 600,
+      "profil": [
+       [
+        -42.0,
+        -600.0
+       ],
+       [
+        42.0,
+        -600.0
+       ],
+       [
+        42.0,
+        -492.0
+       ],
+       [
+        300.0,
+        -492.0
+       ],
+       [
+        120.0,
+        -120.0
+       ],
+       [
+        240.0,
+        -120.0
+       ],
+       [
+        84.0,
+        216.0
+       ],
+       [
+        180.0,
+        216.0
+       ],
+       [
+        0,
+        600.0
+       ],
+       [
+        -180.0,
+        216.0
+       ],
+       [
+        -84.0,
+        216.0
+       ],
+       [
+        -240.0,
+        -120.0
+       ],
+       [
+        -120.0,
+        -120.0
+       ],
+       [
+        -300.0,
+        -492.0
+       ],
+       [
+        -42.0,
+        -492.0
+       ]
+      ],
+      "zuschnitt": "Umriss mit der Stichsäge aussägen (Vorlage aufzeichnen)",
+      "instanzen": [
+       {
+        "p": [
+         0.0,
+         600.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Erdspieß Tanne 120 cm",
+      "material": "dachlatte",
+      "laenge": 790,
+      "zuschnitt": "unten spitz zusägen (2× ca. 30°)",
+      "instanzen": [
+       {
+        "p": [
+         0.0,
+         145.0,
+         -21
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 4
+     }
+    ],
+    "schritte": [
+     "Tannen-Umriss auf die Platte zeichnen: Mittellinie ziehen, Stamm und drei Stufen mit Zollstock übertragen (Maße siehe Zeichnung).",
+     "Die Tannen sind so angeordnet, dass zwei Platten reichen (Zuschnittplan).",
+     "Mit der Stichsäge aussägen – für die Spitzen ein feines Kurvensägeblatt nehmen.",
+     "Kanten gut schleifen (Schleifpapier 120, dann 180) und besonders die Stirnkanten 3× lasieren, da zieht Wasser rein.",
+     "Erdspieß unten anspitzen und hinten mittig mit 4 Schrauben 4×40 anschrauben.",
+     "Optional: Lichterkette mit kleinen Clips entlang des Umrisses auf der Rückseite befestigen."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "lichterhaus",
+  "name": "Lichterhaus",
+  "untertitel": "Ein Haus aus Licht für die Haustür",
+  "beschreibung": "Ein Hausumriss aus Latten mit Satteldach und Schornstein. Mit Lichterkette leuchtet es abends wie ein kleines Zuhause.",
+  "kategorie": "draussen",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "advent",
+  "varianten": [
+   {
+    "id": "standard",
+    "name": "Standard",
+    "masse": "ca. 92 × 124 cm",
+    "preis": {
+     "ohne": 45,
+     "mit": 62
+    },
+    "stunden": 1.5,
+    "licht": [
+     {
+      "material": "lichterkette10",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Bodenlatte",
+      "material": "dachlatte",
+      "laenge": 800,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         72.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Wand",
+      "material": "dachlatte",
+      "laenge": 700,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         -376.0,
+         446.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       },
+       {
+        "p": [
+         376.0,
+         446.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Dachlatte",
+      "material": "dachlatte",
+      "laenge": 625,
+      "zuschnitt": "oben 45° Gehrung (First), unten gerade",
+      "instanzen": [
+       {
+        "p": [
+         -238.2,
+         991.8,
+         24
+        ],
+        "r": [
+         0,
+         0,
+         45
+        ]
+       },
+       {
+        "p": [
+         238.2,
+         991.8,
+         24
+        ],
+        "r": [
+         0,
+         0,
+         -45
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Schornstein",
+      "material": "dachlatte",
+      "laenge": 160,
+      "zuschnitt": "unten 45° schräg (sitzt auf dem Dach)",
+      "instanzen": [
+       {
+        "p": [
+         176.0,
+         1142.9,
+         48
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Standfuß (quer)",
+      "material": "dachlatte",
+      "laenge": 300,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         -240.0,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       },
+       {
+        "p": [
+         240.0,
+         24.0,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben440",
+      "anzahl": 16
+     },
+     {
+      "material": "winkel",
+      "anzahl": 4
+     }
+    ],
+    "schritte": [
+     "Bodenlatte, Wände, Dachlatten, Schornstein und Füße laut Stückliste zuschneiden. Die Dachlatten bekommen oben 45° – das kann auch eine ältere Kappsäge meist sauber.",
+     "Wände auf die Bodenlatte stellen und von unten verschrauben, innen je einen Winkel setzen.",
+     "Dachlatten vorne auf die Wände legen, am First zusammenstoßen lassen, verschrauben und hinten am First einen Winkel setzen.",
+     "Schornstein auf die rechte Dachlatte schrauben.",
+     "Standfüße quer unter die Bodenlatte schrauben.",
+     "Schleifen, 2× lasieren, Lichterkette entlang des Umrisses befestigen."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "windlicht",
+  "name": "Windlicht",
+  "untertitel": "Kleiner Turm aus Latten",
+  "beschreibung": "Lattenstücke im Blockhaus-Stil gestapelt, innen ein Glas mit LED-Kerze. Das Licht scheint durch die Fugen.",
+  "kategorie": "geschenk",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "beide",
+  "lichtText": "mit Glas & LED-Kerze",
+  "varianten": [
+   {
+    "id": "s",
+    "name": "S",
+    "masse": "ca. 20 × 20 × 26 cm",
+    "preis": {
+     "ohne": 19,
+     "mit": 26
+    },
+    "stunden": 0.75,
+    "licht": [
+     {
+      "material": "glas",
+      "anzahl": 1
+     },
+     {
+      "material": "ledkerze",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Bodenlatte",
+      "material": "dachlatte",
+      "laenge": 200,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         12.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         -25.3
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         25.3
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Lagenlatte",
+      "material": "dachlatte",
+      "laenge": 200,
+      "zuschnitt": "gerade, Kanten schleifen",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         36.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         36.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         76.0,
+         60.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -76.0,
+         60.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         84.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         84.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         76.0,
+         108.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -76.0,
+         108.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         132.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         132.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         76.0,
+         156.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -76.0,
+         156.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         180.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         180.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         76.0,
+         204.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -76.0,
+         204.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         228.0,
+         76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         228.0,
+         -76.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         76.0,
+         252.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -76.0,
+         252.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Windlichtglas",
+      "form": "zylinder",
+      "nurModell": true,
+      "nurMitLicht": true,
+      "glas": true,
+      "durchmesser": 90,
+      "hoehe": 110,
+      "farbe": "#e6f2ee",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         79.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "LED-Kerze",
+      "form": "zylinder",
+      "nurModell": true,
+      "nurMitLicht": true,
+      "flamme": true,
+      "durchmesser": 40,
+      "hoehe": 70,
+      "farbe": "#f3ead8",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         59,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "naegel",
+      "anzahl": 48
+     },
+     {
+      "material": "leim",
+      "anzahl": 1
+     }
+    ],
+    "schritte": [
+     "Alle Latten auf 200 mm ablängen. Tipp: einen Anschlag an der Kappsäge festklemmen, dann sind alle gleich lang.",
+     "Kanten schleifen und vorlasieren.",
+     "Bodenlatten nebeneinander legen, die erste Lage quer darauf leimen und nageln.",
+     "Lage für Lage abwechselnd um 90° gedreht aufbauen (wie ein Blockhaus), jede Lage mit Holzleim D3 und 2 Stiften pro Ecke befestigen.",
+     "Nachlasieren, Glas mit LED-Kerze hineinstellen. Keine echte Kerze ohne Glas!"
+    ]
+   },
+   {
+    "id": "l",
+    "name": "L",
+    "masse": "ca. 30 × 30 × 41 cm",
+    "preis": {
+     "ohne": 34,
+     "mit": 39
+    },
+    "stunden": 1.25,
+    "licht": [
+     {
+      "material": "glas",
+      "anzahl": 1
+     },
+     {
+      "material": "ledkerze",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Bodenlatte",
+      "material": "dachlatte",
+      "laenge": 300,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         12.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         -75.6
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         -25.2
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         25.2
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         75.6
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         12.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Lagenlatte",
+      "material": "dachlatte",
+      "laenge": 300,
+      "zuschnitt": "gerade, Kanten schleifen",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         36.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         36.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         60.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         60.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         84.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         84.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         108.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         108.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         132.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         132.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         156.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         156.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         180.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         180.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         204.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         204.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         228.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         228.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         252.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         252.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         276.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         276.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         300.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         300.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         324.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         324.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         348.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         348.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         372.0,
+         126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         372.0,
+         -126.0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         126.0,
+         396.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       },
+       {
+        "p": [
+         -126.0,
+         396.0,
+         0
+        ],
+        "r": [
+         90,
+         90,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Windlichtglas",
+      "form": "zylinder",
+      "nurModell": true,
+      "nurMitLicht": true,
+      "glas": true,
+      "durchmesser": 120,
+      "hoehe": 160,
+      "farbe": "#e6f2ee",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         104.0,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "LED-Kerze",
+      "form": "zylinder",
+      "nurModell": true,
+      "nurMitLicht": true,
+      "flamme": true,
+      "durchmesser": 40,
+      "hoehe": 70,
+      "farbe": "#f3ead8",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         59,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "naegel",
+      "anzahl": 72
+     },
+     {
+      "material": "leim",
+      "anzahl": 1
+     }
+    ],
+    "schritte": [
+     "Alle Latten auf 300 mm ablängen. Tipp: einen Anschlag an der Kappsäge festklemmen, dann sind alle gleich lang.",
+     "Kanten schleifen und vorlasieren.",
+     "Bodenlatten nebeneinander legen, die erste Lage quer darauf leimen und nageln.",
+     "Lage für Lage abwechselnd um 90° gedreht aufbauen (wie ein Blockhaus), jede Lage mit Holzleim D3 und 2 Stiften pro Ecke befestigen.",
+     "Nachlasieren, Glas mit LED-Kerze hineinstellen. Keine echte Kerze ohne Glas!"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kerzenbalken",
+  "name": "Kerzenbalken",
+  "untertitel": "Der Adventskranz als Balken",
+  "beschreibung": "Ein geflämmtes Kantholz mit vier Kerzenplätzen. Rustikal, schlicht und ein schönes Geschenk.",
+  "kategorie": "geschenk",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "beide",
+  "lichtText": "mit Kerzen",
+  "varianten": [
+   {
+    "id": "teelicht",
+    "name": "Für Teelichter",
+    "masse": "ca. 50 × 7 × 7 cm",
+    "preis": {
+     "ohne": 24,
+     "mit": 29
+    },
+    "stunden": 1.0,
+    "licht": [
+     {
+      "material": "ledteelicht",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "geflammt",
+    "teile": [
+     {
+      "name": "Kerzenbalken",
+      "material": "kantholz70",
+      "laenge": 500,
+      "zuschnitt": "gerade, danach flämmen und ausbürsten",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         35,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Teelicht",
+      "form": "zylinder",
+      "nurModell": true,
+      "durchmesser": 39,
+      "hoehe": 16,
+      "farbe": "#d9d9d9",
+      "flamme": true,
+      "instanzen": [
+       {
+        "p": [
+         -187.5,
+         68,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         -62.5,
+         68,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         62.5,
+         68,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         187.5,
+         68,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "teelichthalter",
+      "anzahl": 4
+     },
+     {
+      "material": "filzgleiter",
+      "anzahl": 4
+     }
+    ],
+    "schritte": [
+     "Kantholz auf 500 mm ablängen, Stirnseiten sauber schleifen.",
+     "Bohrpunkte anzeichnen: bei 1/8, 3/8, 5/8 und 7/8 der Länge, jeweils mittig.",
+     "Mit einem Forstnerbohrer 40 mm ca. 18 mm tief bohren (Bohrständer hilft sehr).",
+     "Mit dem Gasbrenner gleichmäßig flämmen, bis die Oberfläche dunkel ist, dann mit der Messing- oder Drahtbürste in Faserrichtung ausbürsten.",
+     "Abwischen, mit Holzöl einlassen, trocknen lassen.",
+     "Metall-Teelichteinsätze in die Bohrungen setzen – nie Teelichter direkt ins Holz!",
+     "Filzgleiter unten aufkleben."
+    ]
+   },
+   {
+    "id": "stab",
+    "name": "Für Stabkerzen",
+    "masse": "ca. 60 × 7 × 7 cm",
+    "preis": {
+     "ohne": 27,
+     "mit": 34
+    },
+    "stunden": 1.0,
+    "licht": [
+     {
+      "material": "stabkerzen",
+      "anzahl": 1
+     }
+    ],
+    "oberflaeche": "geflammt",
+    "teile": [
+     {
+      "name": "Kerzenbalken",
+      "material": "kantholz70",
+      "laenge": 600,
+      "zuschnitt": "gerade, danach flämmen und ausbürsten",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         35,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Stabkerze",
+      "form": "zylinder",
+      "nurModell": true,
+      "durchmesser": 22,
+      "hoehe": 200,
+      "farbe": "#f3ead8",
+      "flamme": true,
+      "instanzen": [
+       {
+        "p": [
+         -225.0,
+         155,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         -75.0,
+         155,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         75.0,
+         155,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         225.0,
+         155,
+         0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "kerzentuelle",
+      "anzahl": 4
+     },
+     {
+      "material": "filzgleiter",
+      "anzahl": 4
+     }
+    ],
+    "schritte": [
+     "Kantholz auf 600 mm ablängen, Stirnseiten sauber schleifen.",
+     "Bohrpunkte anzeichnen: bei 1/8, 3/8, 5/8 und 7/8 der Länge, jeweils mittig.",
+     "Mit einem Forstnerbohrer 25 mm ca. 20 mm tief bohren, so passen die Kerzentüllen.",
+     "Mit dem Gasbrenner gleichmäßig flämmen, bis die Oberfläche dunkel ist, dann mit der Messing- oder Drahtbürste in Faserrichtung ausbürsten.",
+     "Abwischen, mit Holzöl einlassen, trocknen lassen.",
+     "Metall-Kerzentüllen einsetzen – nie Kerzen direkt ins Holz!",
+     "Filzgleiter unten aufkleben."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "vogelhaus",
+  "name": "Vogelfutterhaus",
+  "untertitel": "Futterplatz mit Satteldach",
+  "beschreibung": "Offenes Futterhaus mit Rand gegen Herunterfallen und überstehendem Dach. Zum Aufhängen oder auf einen Pfahl schrauben.",
+  "kategorie": "geschenk",
+  "sichtbar": true,
+  "foto": "",
+  "lieferung": "beide",
+  "varianten": [
+   {
+    "id": "standard",
+    "name": "Standard",
+    "masse": "ca. 30 × 36 × 33 cm",
+    "preis": {
+     "ohne": 45,
+     "mit": 45
+    },
+    "stunden": 1.75,
+    "licht": [],
+    "oberflaeche": "lasur",
+    "teile": [
+     {
+      "name": "Boden",
+      "material": "leimholz",
+      "laenge": 280,
+      "breite": 300,
+      "zuschnitt": "rechteckig",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         9.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Randleiste lang",
+      "material": "leiste20",
+      "laenge": 300,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         -130.0,
+         28,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       },
+       {
+        "p": [
+         130.0,
+         28,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Randleiste kurz",
+      "material": "leiste20",
+      "laenge": 240,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         28,
+         140.0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         28,
+         -140.0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Eckpfosten",
+      "material": "leiste20",
+      "laenge": 180,
+      "zuschnitt": "gerade",
+      "instanzen": [
+       {
+        "p": [
+         -110.0,
+         108.0,
+         -110.0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       },
+       {
+        "p": [
+         -110.0,
+         108.0,
+         110.0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       },
+       {
+        "p": [
+         110.0,
+         108.0,
+         -110.0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       },
+       {
+        "p": [
+         110.0,
+         108.0,
+         110.0
+        ],
+        "r": [
+         0,
+         0,
+         90
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Giebel",
+      "material": "leimholz",
+      "laenge": 280,
+      "breite": 110,
+      "profil": [
+       [
+        -140.0,
+        -55.0
+       ],
+       [
+        140.0,
+        -55.0
+       ],
+       [
+        0,
+        55.0
+       ]
+      ],
+      "zuschnitt": "Dreieck, Dachneigung ca. 38°",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         253.0,
+         129.0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       },
+       {
+        "p": [
+         0,
+         253.0,
+         -129.0
+        ],
+        "r": [
+         0,
+         0,
+         0
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Dachplatte",
+      "material": "leimholz",
+      "laenge": 360,
+      "breite": 220,
+      "zuschnitt": "rechteckig, First-Kante 38° anschrägen (oder Fuge mit Dichtmasse)",
+      "instanzen": [
+       {
+        "p": [
+         -85.8,
+         252.1,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -51.8
+        ]
+       },
+       {
+        "p": [
+         85.8,
+         252.1,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         51.8
+        ]
+       }
+      ]
+     }
+    ],
+    "kleinteile": [
+     {
+      "material": "schrauben330",
+      "anzahl": 30
+     },
+     {
+      "material": "leim",
+      "anzahl": 1
+     },
+     {
+      "material": "ringschrauben",
+      "anzahl": 1
+     }
+    ],
+    "schritte": [
+     "Boden, Giebel und Dachplatten aus der Leimholzplatte sägen (Zuschnittplan). Giebel: Dreieck 280 mm breit, 110 mm hoch.",
+     "Randleisten auf den Boden leimen und schrauben, an einer Ecke 2 cm Lücke lassen – da läuft Regenwasser ab.",
+     "Eckpfosten auf den Boden schrauben (von unten vorbohren).",
+     "Giebel vorne und hinten an die Pfosten schrauben.",
+     "Dachplatten auflegen und in die Giebel schrauben. Die First-Kante anschrägen oder die Fuge abdichten.",
+     "Mit ungiftiger, wasserbasierter Lasur nur außen streichen – die Futterfläche bleibt unbehandelt.",
+     "Ringschrauben oben ins Dach oder das Haus auf einen Pfahl schrauben."
+    ]
+   }
+  ]
+ }
+]

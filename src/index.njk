@@ -1,0 +1,166 @@
+---
+layout: basis.njk
+permalink: index.html
+koerperKlasse: shop
+---
+<header class="start">
+  <div class="lichterkette" id="lichterkette" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kopf">
+      <a class="logo" href="./">{% include "logo.njk" %}<span class="logo-text">Jans <i>Holzstube</i></span></a>
+      <nav aria-label="Seitennavigation">
+        <a href="#deko">Deko</a>
+        <a href="#ablauf">So läuft's</a>
+        <a href="#termine">Termine</a>
+        <a href="#ueber">Über mich</a>
+      </nav>
+    </div>
+    <div class="start-raster">
+      <div>
+        <p class="ueberzeile">{{ site.untertitel }}</p>
+        <h1>Holz, das <em>leuchtet.</em></h1>
+        <p class="einleitung">{{ site.einleitung }}</p>
+        <div class="start-aktionen">
+          <a class="knopf knopf-gold" href="#deko">Zur Deko</a>
+          <a class="knopf" href="#termine">Liefertermine</a>
+        </div>
+      </div>
+      <div class="start-bild" id="start-bild" aria-hidden="true">
+        <span class="start-schild"><b>Holzstern XXL</b> · ca. 2 m</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="abschnitt" id="deko">
+    <div class="wrap">
+      <div class="abschnitt-kopf">
+        <p class="ueberzeile">Die Deko</p>
+        <h2>Alles von Hand <em class="akzent">gesägt</em></h2>
+        <p>Wähle Größe und ob eine Lichterkette dabei sein soll – der Preis passt sich direkt an. Bei „Entwurf“ zeige ich dir den Bauplan, das Foto folgt nach dem ersten Bau.</p>
+      </div>
+      <div class="filter" role="group" aria-label="Filter">
+        <button type="button" data-filter="alle" aria-pressed="true">Alle</button>
+        <button type="button" data-filter="draussen" aria-pressed="false">Für draußen</button>
+        <button type="button" data-filter="geschenk" aria-pressed="false">Zum Verschenken</button>
+      </div>
+      <div class="produkte" id="produkte">
+        {% for p in produkte %}{% if p.sichtbar %}
+        {% set v = p.varianten[0] %}
+        <article class="karte" data-id="{{ p.id }}" data-kategorie="{{ p.kategorie }}">
+          <div class="karte-bild">
+            {% if p.foto %}<img src="{{ p.foto }}" alt="{{ p.name }}" loading="lazy">{% else %}<span class="marke">Entwurf</span>{% endif %}
+            <button type="button" class="knopf knopf-klein knopf-3d" data-3d>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M4 7.4l8 4.6 8-4.6M12 12v9.2"/></svg>
+              In 3D
+            </button>
+          </div>
+          <div class="karte-inhalt">
+            <h3>{{ p.name }}</h3>
+            <div class="unter">{{ p.untertitel }}</div>
+            <p class="beschreibung">{{ p.beschreibung }}</p>
+            {% if p.varianten.length > 1 %}
+            <div class="wahl" role="group" aria-label="Größe wählen">
+              {% for vv in p.varianten %}<button type="button" data-variante="{{ vv.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ vv.name }}</button>{% endfor %}
+            </div>
+            {% endif %}
+            <label class="schalter{% if not v.licht.length %} versteckt{% endif %}">
+              <input type="checkbox" data-licht>
+              <span class="bahn"></span>
+              <span>{{ p.lichtText or "mit Beleuchtung" }}</span>
+            </label>
+            <div class="karte-fuss">
+              <div>
+                <div class="preis" data-preis>{{ v.preis.ohne }} €</div>
+                <div class="masse" data-masse>{{ v.masse }}</div>
+              </div>
+              <a class="knopf knopf-gold" data-anfrage href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 5-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2c0 1.2.9 2.3 1 2.5.1.2 1.7 2.7 4.2 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3z"/></svg>
+                Anfragen
+              </a>
+            </div>
+          </div>
+        </article>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="ablauf" style="padding-top:0">
+    <div class="wrap">
+      <div class="abschnitt-kopf">
+        <p class="ueberzeile">So läuft's</p>
+        <h2>Drei Schritte bis zum <em class="akzent">Leuchten</em></h2>
+      </div>
+      <div class="schritte">
+        <div class="schritt"><h3>Schreib mir</h3><p>Tippe bei deinem Lieblingsstück auf „Anfragen“. WhatsApp öffnet sich mit einer fertigen Nachricht – du musst nur noch absenden.</p></div>
+        <div class="schritt"><h3>Ich baue</h3><p>Ich säge, schraube und lasiere alles von Hand. Wenn du magst, schicke ich dir zwischendurch ein Foto.</p></div>
+        <div class="schritt"><h3>Abholen oder bringen</h3><p>Du holst deine Deko ab oder ich bringe sie in der Nachbarschaft vorbei. Bezahlt wird ganz entspannt bei der Übergabe.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt termine-bereich" id="termine">
+    <div class="wrap">
+      <div class="abschnitt-kopf">
+        <p class="ueberzeile">Liefertermine</p>
+        <h2>Rechtzeitig zum <em class="akzent">Advent</em></h2>
+        <p>Ich baue alles selbst, deshalb gibt es zwei feste Termine.</p>
+      </div>
+      <div class="termine">
+        {% for t in site.liefertermine %}
+        <div class="termin">
+          <div class="t-titel">{{ t.titel }}</div>
+          <div class="t-datum"><span>Bestellen bis {{ t.bestellen_bis }}</span>Fertig bis {{ t.lieferung_bis }}</div>
+          <p>{{ t.text }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="ueber">
+    <div class="wrap ueber">
+      <div class="foto">{% if site.ueberFoto %}<img src="{{ site.ueberFoto }}" alt="Jan in der Werkstatt" loading="lazy">{% else %}Hier kommt ein Foto aus der Werkstatt hin.{% endif %}</div>
+      <div>
+        <p class="ueberzeile">Über mich</p>
+        <blockquote>{{ site.ueber }}</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt kontakt" style="padding-top:0">
+    <div class="wrap">
+      <h2>Fragen oder <em class="akzent">Sonderwunsch?</em></h2>
+      <p>Andere Größe, andere Farbe, ganz eigene Idee – schreib mir einfach.</p>
+      <p style="margin-top:24px"><a class="knopf knopf-gold" id="kontakt-knopf" href="#" target="_blank" rel="noopener">Per WhatsApp schreiben</a></p>
+      <p class="leise" style="font-size:15px">oder anrufen: {{ site.telefon }}</p>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <span>© {{ site.name }}</span>
+    <span><a href="impressum.html">Impressum</a></span>
+  </div>
+</footer>
+
+<dialog class="fenster" id="fenster-3d" aria-labelledby="fenster-titel">
+  <div class="fenster-buehne" id="buehne-3d"><div class="lade">3D-Modell wird geladen …</div></div>
+  <div class="fenster-kopf">
+    <div><h3 id="fenster-titel">Modell</h3><div class="leise" id="fenster-unter"></div></div>
+    <button type="button" class="knopf knopf-klein" data-schliessen>Schließen</button>
+  </div>
+  <div class="fenster-unten">
+    <button type="button" class="knopf knopf-klein" data-licht-3d>Licht an</button>
+    <button type="button" class="knopf knopf-klein" data-ansicht="vorne">Von vorne</button>
+    <div class="fenster-tipp">Mit einem Finger drehen, mit zwei Fingern zoomen.</div>
+  </div>
+</dialog>
+
+<script type="application/json" id="d-produkte">{{ produkte | alsJson | safe }}</script>
+<script type="application/json" id="d-material">{{ material | alsJson | safe }}</script>
+<script type="application/json" id="d-site">{"whatsapp": {{ site.whatsapp | alsJson | safe }}, "name": {{ site.name | alsJson | safe }}}</script>
+<script type="module" src="assets/js/shop.js"></script>

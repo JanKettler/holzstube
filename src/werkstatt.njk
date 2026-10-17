@@ -1,0 +1,48 @@
+---
+layout: basis.njk
+permalink: werkstatt.html
+titel: Werkstatt
+koerperKlasse: werkstatt
+keinIndex: true
+---
+<section class="login" id="login">
+  <form id="login-form" autocomplete="on">
+    {% include "logo.njk" %}
+    <h1>Werkstatt</h1>
+    <p class="leise" style="margin-top:0">Baupläne, Einkaufsliste und Produkte von {{ site.name }}.</p>
+    <div class="feld"><label for="l-name">Name</label><input type="text" id="l-name" autocomplete="username" autocapitalize="off" required></div>
+    <div class="feld"><label for="l-pw">Passwort</label><input type="password" id="l-pw" autocomplete="current-password" required></div>
+    <p class="warnung versteckt" id="login-fehler">Name oder Passwort stimmt nicht.</p>
+    <button class="knopf knopf-gold" type="submit" style="width:100%">Rein in die Werkstatt</button>
+    <p style="text-align:center;margin:18px 0 0;font-size:14px"><a href="./">← zur Seite</a></p>
+  </form>
+</section>
+
+<div id="app" class="versteckt">
+  <header class="ws-kopf">
+    <div class="ws-kopf-oben">
+      <a class="logo" href="./" title="Zur öffentlichen Seite">{% include "logo.njk" %}<span class="logo-text">Werkstatt</span></a>
+      <div class="ws-status" id="status">
+        <span class="punkt"></span><span id="status-text">Alles gespeichert</span>
+        <button class="knopf knopf-klein" id="speichern" type="button">Speichern</button>
+      </div>
+    </div>
+    <nav class="ws-tabs" role="tablist" aria-label="Bereiche">
+      <button role="tab" data-tab="planen" aria-selected="true">Planen</button>
+      <button role="tab" data-tab="einkauf" aria-selected="false">Einkauf &amp; Zuschnitt</button>
+      <button role="tab" data-tab="bauplan" aria-selected="false">Baupläne</button>
+      <button role="tab" data-tab="produkte" aria-selected="false">Produkte</button>
+      <button role="tab" data-tab="material" aria-selected="false">Material &amp; Preise</button>
+      <button role="tab" data-tab="einstellungen" aria-selected="false">Einstellungen</button>
+    </nav>
+  </header>
+  <main class="ws-inhalt" id="inhalt"></main>
+</div>
+
+<div class="meldung" id="meldung" role="status" aria-live="polite"></div>
+
+<script type="application/json" id="d-produkte">{{ produkte | alsJson | safe }}</script>
+<script type="application/json" id="d-material">{{ material | alsJson | safe }}</script>
+<script type="application/json" id="d-site">{{ site | alsJson | safe }}</script>
+<script type="application/json" id="d-bauliste">{{ bauliste | alsJson | safe }}</script>
+<script type="module" src="assets/js/werkstatt.js"></script>

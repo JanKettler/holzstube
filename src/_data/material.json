@@ -1,0 +1,184 @@
+{
+ "hinweis": "Preise sind Schätzwerte für den Baumarkt (Stand Herbst 2026) – bitte vor dem Einkauf prüfen und hier anpassen.",
+ "saegeschnitt": 4,
+ "stundensatz": 10,
+ "materialien": [
+  {
+   "id": "dachlatte",
+   "name": "Dachlatte 24 × 48 mm, imprägniert",
+   "typ": "linear",
+   "breite": 48,
+   "dicke": 24,
+   "laenge": 3000,
+   "preis": 2.79,
+   "farbe": "#c99a5b"
+  },
+  {
+   "id": "kantholz70",
+   "name": "Kantholz Fichte 70 × 70 mm, gehobelt",
+   "typ": "linear",
+   "breite": 70,
+   "dicke": 70,
+   "laenge": 2500,
+   "preis": 9.99,
+   "farbe": "#8a6a48"
+  },
+  {
+   "id": "leiste20",
+   "name": "Quadratleiste Kiefer 20 × 20 mm",
+   "typ": "linear",
+   "breite": 20,
+   "dicke": 20,
+   "laenge": 2400,
+   "preis": 2.99,
+   "farbe": "#d6b07a"
+  },
+  {
+   "id": "leimholz",
+   "name": "Leimholzplatte Fichte 18 mm, 1200 × 600 mm",
+   "typ": "platte",
+   "dicke": 18,
+   "laenge": 1200,
+   "breite": 600,
+   "preis": 24.99,
+   "farbe": "#dcb47e",
+   "notiz": "Für dauerhaft draußen besser eine Dreischichtplatte (wetterfest verleimt) nehmen."
+  },
+  {
+   "id": "schrauben330",
+   "name": "Holzschrauben 3,5 × 30 mm",
+   "typ": "stueck",
+   "packung": 200,
+   "preis": 5.99
+  },
+  {
+   "id": "schrauben440",
+   "name": "Holzschrauben 4 × 40 mm, verzinkt",
+   "typ": "stueck",
+   "packung": 200,
+   "preis": 7.49
+  },
+  {
+   "id": "schrauben460",
+   "name": "Holzschrauben 4 × 60 mm, verzinkt",
+   "typ": "stueck",
+   "packung": 100,
+   "preis": 6.99
+  },
+  {
+   "id": "winkel",
+   "name": "Winkelverbinder 40 × 40 mm",
+   "typ": "stueck",
+   "packung": 10,
+   "preis": 4.49
+  },
+  {
+   "id": "scharnier",
+   "name": "Scharnier 40 mm (für Stützlatte)",
+   "typ": "stueck",
+   "packung": 2,
+   "preis": 2.99
+  },
+  {
+   "id": "naegel",
+   "name": "Edelstahl-Stifte 1,6 × 40 mm",
+   "typ": "stueck",
+   "packung": 250,
+   "preis": 4.99
+  },
+  {
+   "id": "leim",
+   "name": "Holzleim D3 wasserfest, 250 g",
+   "typ": "stueck",
+   "packung": 8,
+   "preis": 5.99,
+   "einheit": "Portion"
+  },
+  {
+   "id": "ringschrauben",
+   "name": "Ringschrauben + Kette zum Aufhängen",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 3.99
+  },
+  {
+   "id": "teelichthalter",
+   "name": "Teelicht-Einsätze aus Metall",
+   "typ": "stueck",
+   "packung": 10,
+   "preis": 4.99
+  },
+  {
+   "id": "kerzentuelle",
+   "name": "Kerzentüllen Metall (für Stabkerzen)",
+   "typ": "stueck",
+   "packung": 4,
+   "preis": 5.49
+  },
+  {
+   "id": "filzgleiter",
+   "name": "Filzgleiter",
+   "typ": "stueck",
+   "packung": 24,
+   "preis": 2.49
+  },
+  {
+   "id": "glas",
+   "name": "Windlichtglas Ø 9 cm",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 2.49
+  },
+  {
+   "id": "ledkerze",
+   "name": "LED-Kerze mit Timer",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 3.99
+  },
+  {
+   "id": "ledteelicht",
+   "name": "LED-Teelichter, 4er-Pack",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 3.49
+  },
+  {
+   "id": "stabkerzen",
+   "name": "Stabkerzen, 4er-Pack",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 3.99
+  },
+  {
+   "id": "lichterkette_batt",
+   "name": "LED-Lichterkette Batterie, 3 m, warmweiß",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 5.99
+  },
+  {
+   "id": "lichterkette5",
+   "name": "LED-Lichterkette außen, 5 m, warmweiß, Timer",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 9.99
+  },
+  {
+   "id": "lichterkette10",
+   "name": "LED-Lichterkette außen, 10 m, warmweiß, Timer",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 16.99
+  },
+  {
+   "id": "lasur",
+   "name": "Holzlasur außen, 0,75 l",
+   "typ": "lasur",
+   "liter": 0.75,
+   "ergiebigkeit": 12,
+   "anstriche": 2,
+   "preis": 14.99
+  }
+ ]
+}
