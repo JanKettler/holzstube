@@ -1,11 +1,11 @@
 {
- "hinweis": "Preise sind Schätzwerte für den Baumarkt (Stand Herbst 2026) – bitte vor dem Einkauf prüfen und hier anpassen.",
+ "hinweis": "Preise orientieren sich an Bauhaus/toom/Hornbach (Herbst 2026), Latten liegen überall bei ca. 0,85–0,95 € pro Meter. Holz selbst aussuchen: gerade, wenig Äste. Unbehandelte, sägeraue Fichte nehmen – keine grün imprägnierte Dachlatte.",
  "saegeschnitt": 4,
  "stundensatz": 10,
  "materialien": [
   {
    "id": "dachlatte",
-   "name": "Dachlatte 24 × 48 mm, imprägniert",
+   "name": "Latte Fichte sägerau 24 × 48 mm, 3 m",
    "typ": "linear",
    "breite": 48,
    "dicke": 24,
@@ -14,14 +14,24 @@
    "farbe": "#c99a5b"
   },
   {
-   "id": "kantholz70",
-   "name": "Kantholz Fichte 70 × 70 mm, gehobelt",
+   "id": "kantholz78",
+   "name": "Kantholz Fichte sägerau 78 × 78 mm, 3 m",
    "typ": "linear",
-   "breite": 70,
-   "dicke": 70,
-   "laenge": 2500,
-   "preis": 9.99,
+   "breite": 78,
+   "dicke": 78,
+   "laenge": 3000,
+   "preis": 17.97,
    "farbe": "#8a6a48"
+  },
+  {
+   "id": "rundstab12",
+   "name": "Rundstab Buche Ø 12 mm, 1 m",
+   "typ": "linear",
+   "breite": 12,
+   "dicke": 12,
+   "laenge": 1000,
+   "preis": 1.99,
+   "farbe": "#d9b98c"
   },
   {
    "id": "leiste20",
@@ -170,6 +180,20 @@
    "typ": "stueck",
    "packung": 1,
    "preis": 16.99
+  },
+  {
+   "id": "lichterkette_cluster",
+   "name": "LED-Büschel-Lichterkette außen, ca. 1000 LEDs, warmweiß, Timer",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 34.99
+  },
+  {
+   "id": "einmachglas",
+   "name": "Einmachglas ca. 0,75 l (Futtersilo)",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 1.99
   },
   {
    "id": "lasur",

@@ -37,7 +37,7 @@ function lichterkette() {
 
 // ---------- Glühbirnen entlang einer Zeichnung ----------
 function birnenPunkte(v, abstandFaktor = 22) {
-  const formen = vorderansicht(v, M).filter((f) => !f.modell && !/stütz|spieß|fuß/i.test(f.name));
+  const formen = vorderansicht(v, M).filter((f) => !f.modell && !/stütz|spieß|fuß|quer/i.test(f.name));
   const xs = formen.flatMap((f) => f.poly.map((q) => q[0])), ys = formen.flatMap((f) => f.poly.map((q) => q[1]));
   const groesse = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
   const abstand = groesse / abstandFaktor;
@@ -69,6 +69,7 @@ function birnenPunkte(v, abstandFaktor = 22) {
 }
 
 function zeichnungMitLicht(v, licht, dichte = 22) {
+  v = { ...v, teile: (v.teile || []).filter((t) => !/stütz/i.test(t.name)) };
   let svg = zeichnungSVG(v, M, { linie: 200 });
   const hatFlamme = (v.teile || []).some((t) => t.flamme && !t.nurMitLicht);
   if (licht && !hatFlamme && !(v.teile || []).some((t) => t.nurMitLicht)) {
