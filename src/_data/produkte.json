@@ -857,7 +857,7 @@
    {
     "id": "klein",
     "name": "Klein · für drinnen",
-    "masse": "ca. 56 × 61 cm",
+    "masse": "ca. 52 × 57 cm",
     "preis": {
      "ohne": 25,
      "mit": 32
@@ -872,125 +872,218 @@
     "oberflaeche": "lasur",
     "teile": [
      {
-      "name": "Seitenteil oben rechts (lang)",
+      "name": "Seitenteil oben (Spitze)",
       "material": "dachlatte",
-      "laenge": 245,
-      "zuschnitt": "oben Spitze, unten waagerecht",
+      "laenge": 215,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "oben Gehrung zur Spitze, unten waagerecht – Schnitte gegenläufig",
+      "profil": [
+       [
+        -61.5,
+        -12.0
+       ],
+       [
+        85.5,
+        -12.0
+       ],
+       [
+        95.5,
+        12.0
+       ],
+       [
+        -119.5,
+        12.0
+       ]
+      ],
       "instanzen": [
        {
         "p": [
-         44.6,
-         512.9,
+         -34.6,
+         451.4,
          0
         ],
         "r": [
          90,
          0,
-         112.5
+         -112.5
         ]
        }
       ],
-      "winkel": "22,5° / 22,5°"
+      "gruppe": "oben"
+     },
+     {
+      "name": "Seitenteil oben (Spitze)",
+      "material": "dachlatte",
+      "laenge": 215,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "oben Gehrung zur Spitze, unten waagerecht – Schnitte gegenläufig",
+      "profil": [
+       [
+        -119.5,
+        -12.0
+       ],
+       [
+        95.5,
+        -12.0
+       ],
+       [
+        85.5,
+        12.0
+       ],
+       [
+        -61.5,
+        12.0
+       ]
+      ],
+      "instanzen": [
+       {
+        "p": [
+         34.6,
+         451.4,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       }
+      ],
+      "gruppe": "oben"
      },
      {
       "name": "Seitenteil",
       "material": "dachlatte",
       "laenge": 210,
-      "zuschnitt": "Enden stehen waagerecht",
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "beide Enden waagerecht – Schnitte parallel",
+      "profil": [
+       [
+        -110.0,
+        -12.0
+       ],
+       [
+        100.0,
+        -12.0
+       ],
+       [
+        110.0,
+        12.0
+       ],
+       [
+        -100.0,
+        12.0
+       ]
+      ],
       "instanzen": [
        {
         "p": [
-         -51.3,
-         496.8,
+         -116.3,
+         316.9,
          0
         ],
         "r": [
          90,
          0,
-         67.5
+         -112.5
         ]
        },
        {
         "p": [
-         -138.5,
-         348.9,
+         -203.6,
+         169.0,
          0
         ],
         "r": [
          90,
          0,
-         67.5
-        ]
-       },
-       {
-        "p": [
-         -225.7,
-         201.0,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         67.5
-        ]
-       },
-       {
-        "p": [
-         138.5,
-         348.9,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         112.5
-        ]
-       },
-       {
-        "p": [
-         225.7,
-         201.0,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         112.5
+         -112.5
         ]
        }
+      ]
+     },
+     {
+      "name": "Seitenteil",
+      "material": "dachlatte",
+      "laenge": 210,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "beide Enden waagerecht – Schnitte parallel",
+      "profil": [
+       [
+        -100.0,
+        -12.0
+       ],
+       [
+        110.0,
+        -12.0
+       ],
+       [
+        100.0,
+        12.0
+       ],
+       [
+        -110.0,
+        12.0
+       ]
       ],
-      "winkel": "22,5° / 22,5°"
+      "instanzen": [
+       {
+        "p": [
+         116.3,
+         316.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       },
+       {
+        "p": [
+         203.6,
+         169.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       }
+      ]
      },
      {
       "name": "Bodenlatte",
       "material": "dachlatte",
-      "laenge": 565,
+      "laenge": 515,
+      "winkel": "gerade",
       "zuschnitt": "",
       "instanzen": [
        {
         "p": [
          0,
-         72.0,
+         60.0,
          0
         ],
         "r": [
-         0,
+         90,
          0,
          0
         ]
        }
-      ],
-      "winkel": "gerade"
+      ]
      },
      {
       "name": "Standfuß (quer)",
       "material": "dachlatte",
       "laenge": 245,
+      "winkel": "gerade",
       "zuschnitt": "Kanten leicht brechen",
       "instanzen": [
        {
         "p": [
-         -169.5,
+         -154.5,
          24.0,
          0
         ],
@@ -1002,7 +1095,7 @@
        },
        {
         "p": [
-         169.5,
+         154.5,
          24.0,
          0
         ],
@@ -1012,8 +1105,7 @@
          0
         ]
        }
-      ],
-      "winkel": "gerade"
+      ]
      }
     ],
     "kleinteile": [
@@ -1028,8 +1120,8 @@
     ],
     "schritte": [
      "Zuerst eine Probe-Latte schneiden: Kappsäge auf 22,5° stellen und mit einer Schmiege prüfen. Bei einer ungenauen Säge lieber einmal anzeichnen und nachkorrigieren.",
-     "Alle Teile laut Stückliste zuschneiden. Die Seitenteile haben an beiden Enden 22,5°, damit die Enden später waagerecht stehen.",
-     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (das lange rechte überlappt das linke), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenbreite nach außen versetzt.",
+     "Alle Teile laut Stückliste zuschneiden. Alle Seitenteile bekommen an beiden Enden 22,5°: bei den Spitzenteilen gegenläufig (oben Gehrung, unten waagerecht), bei den anderen parallel – so treffen alle Teile sauber und waagerecht aufeinander.",
+     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (treffen sich an der Spitze auf Gehrung), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenstärke nach außen versetzt. Die Spitze mit Leim und einer Schraube von oben verbinden.",
      "Die Stufen von außen mit je 2 Schrauben 4×60 durch die überlappenden Stücke verschrauben.",
      "Bodenlatte unten anschrauben, die Seiten stehen darauf.",
      "Die beiden Standfüße quer unter die Bodenlatte schrauben (vorne/hinten gleich weit überstehen lassen).",
@@ -1039,7 +1131,7 @@
    {
     "id": "gross",
     "name": "Groß · für draußen",
-    "masse": "ca. 98 × 112 cm",
+    "masse": "ca. 94 × 107 cm",
     "preis": {
      "ohne": 49,
      "mit": 65
@@ -1054,125 +1146,218 @@
     "oberflaeche": "lasur",
     "teile": [
      {
-      "name": "Seitenteil oben rechts (lang)",
+      "name": "Seitenteil oben (Spitze)",
       "material": "dachlatte",
-      "laenge": 490,
-      "zuschnitt": "oben Spitze, unten waagerecht",
+      "laenge": 425,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "oben Gehrung zur Spitze, unten waagerecht – Schnitte gegenläufig",
+      "profil": [
+       [
+        -166.5,
+        -12.0
+       ],
+       [
+        190.5,
+        -12.0
+       ],
+       [
+        200.5,
+        12.0
+       ],
+       [
+        -224.5,
+        12.0
+       ]
+      ],
       "instanzen": [
        {
         "p": [
-         78.1,
-         940.2,
+         -74.8,
+         862.5,
          0
         ],
         "r": [
          90,
          0,
-         112.5
+         -112.5
         ]
        }
       ],
-      "winkel": "22,5° / 22,5°"
+      "gruppe": "oben"
+     },
+     {
+      "name": "Seitenteil oben (Spitze)",
+      "material": "dachlatte",
+      "laenge": 425,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "oben Gehrung zur Spitze, unten waagerecht – Schnitte gegenläufig",
+      "profil": [
+       [
+        -224.5,
+        -12.0
+       ],
+       [
+        200.5,
+        -12.0
+       ],
+       [
+        190.5,
+        12.0
+       ],
+       [
+        -166.5,
+        12.0
+       ]
+      ],
+      "instanzen": [
+       {
+        "p": [
+         74.8,
+         862.5,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       }
+      ],
+      "gruppe": "oben"
      },
      {
       "name": "Seitenteil",
       "material": "dachlatte",
       "laenge": 420,
-      "zuschnitt": "Enden stehen waagerecht",
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "beide Enden waagerecht – Schnitte parallel",
+      "profil": [
+       [
+        -215.0,
+        -12.0
+       ],
+       [
+        205.0,
+        -12.0
+       ],
+       [
+        215.0,
+        12.0
+       ],
+       [
+        -205.0,
+        12.0
+       ]
+      ],
       "instanzen": [
        {
         "p": [
-         -91.5,
-         907.9,
+         -221.6,
+         570.9,
          0
         ],
         "r": [
          90,
          0,
-         67.5
+         -112.5
         ]
        },
        {
         "p": [
-         -243.7,
-         602.9,
+         -373.8,
+         266.0,
          0
         ],
         "r": [
          90,
          0,
-         67.5
-        ]
-       },
-       {
-        "p": [
-         -396.0,
-         298.0,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         67.5
-        ]
-       },
-       {
-        "p": [
-         243.7,
-         602.9,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         112.5
-        ]
-       },
-       {
-        "p": [
-         396.0,
-         298.0,
-         0
-        ],
-        "r": [
-         90,
-         0,
-         112.5
+         -112.5
         ]
        }
+      ]
+     },
+     {
+      "name": "Seitenteil",
+      "material": "dachlatte",
+      "laenge": 420,
+      "winkel": "22,5° / 22,5°",
+      "zuschnitt": "beide Enden waagerecht – Schnitte parallel",
+      "profil": [
+       [
+        -205.0,
+        -12.0
+       ],
+       [
+        215.0,
+        -12.0
+       ],
+       [
+        205.0,
+        12.0
+       ],
+       [
+        -215.0,
+        12.0
+       ]
       ],
-      "winkel": "22,5° / 22,5°"
+      "instanzen": [
+       {
+        "p": [
+         221.6,
+         570.9,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       },
+       {
+        "p": [
+         373.8,
+         266.0,
+         0
+        ],
+        "r": [
+         90,
+         0,
+         -67.5
+        ]
+       }
+      ]
      },
      {
       "name": "Bodenlatte",
       "material": "dachlatte",
-      "laenge": 985,
+      "laenge": 935,
+      "winkel": "gerade",
       "zuschnitt": "",
       "instanzen": [
        {
         "p": [
          0,
-         72.0,
+         60.0,
          0
         ],
         "r": [
-         0,
+         90,
          0,
          0
         ]
        }
-      ],
-      "winkel": "gerade"
+      ]
      },
      {
       "name": "Standfuß (quer)",
       "material": "dachlatte",
       "laenge": 490,
+      "winkel": "gerade",
       "zuschnitt": "Kanten leicht brechen",
       "instanzen": [
        {
         "p": [
-         -295.5,
+         -280.5,
          24.0,
          0
         ],
@@ -1184,7 +1369,7 @@
        },
        {
         "p": [
-         295.5,
+         280.5,
          24.0,
          0
         ],
@@ -1194,8 +1379,7 @@
          0
         ]
        }
-      ],
-      "winkel": "gerade"
+      ]
      }
     ],
     "kleinteile": [
@@ -1210,202 +1394,12 @@
     ],
     "schritte": [
      "Zuerst eine Probe-Latte schneiden: Kappsäge auf 22,5° stellen und mit einer Schmiege prüfen. Bei einer ungenauen Säge lieber einmal anzeichnen und nachkorrigieren.",
-     "Alle Teile laut Stückliste zuschneiden. Die Seitenteile haben an beiden Enden 22,5°, damit die Enden später waagerecht stehen.",
-     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (das lange rechte überlappt das linke), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenbreite nach außen versetzt.",
+     "Alle Teile laut Stückliste zuschneiden. Alle Seitenteile bekommen an beiden Enden 22,5°: bei den Spitzenteilen gegenläufig (oben Gehrung, unten waagerecht), bei den anderen parallel – so treffen alle Teile sauber und waagerecht aufeinander.",
+     "Teile auf dem Boden auslegen: oben die beiden Spitzenteile (treffen sich an der Spitze auf Gehrung), darunter je Seite zwei weitere Stufen, jeweils um eine Lattenstärke nach außen versetzt. Die Spitze mit Leim und einer Schraube von oben verbinden.",
      "Die Stufen von außen mit je 2 Schrauben 4×60 durch die überlappenden Stücke verschrauben.",
      "Bodenlatte unten anschrauben, die Seiten stehen darauf.",
      "Die beiden Standfüße quer unter die Bodenlatte schrauben (vorne/hinten gleich weit überstehen lassen).",
      "Schleifen, 2× lasieren, trocknen lassen, Lichterkette im Zickzack hinter dem Rahmen spannen."
-    ]
-   }
-  ]
- },
- {
-  "id": "lichterhaus",
-  "name": "Lichterhaus",
-  "untertitel": "Ein Haus aus Licht für die Haustür",
-  "beschreibung": "Ein Hausumriss aus Latten mit Satteldach und Schornstein. Mit Lichterkette leuchtet es abends wie ein kleines Zuhause.",
-  "kategorie": "draussen",
-  "sichtbar": true,
-  "foto": "",
-  "lieferung": "advent",
-  "varianten": [
-   {
-    "id": "standard",
-    "name": "Standard",
-    "masse": "ca. 92 × 124 cm",
-    "preis": {
-     "ohne": 45,
-     "mit": 62
-    },
-    "stunden": 1.5,
-    "licht": [
-     {
-      "material": "lichterkette10",
-      "anzahl": 1
-     }
-    ],
-    "oberflaeche": "lasur",
-    "teile": [
-     {
-      "name": "Bodenlatte",
-      "material": "dachlatte",
-      "laenge": 800,
-      "zuschnitt": "",
-      "instanzen": [
-       {
-        "p": [
-         0,
-         72.0,
-         0
-        ],
-        "r": [
-         0,
-         0,
-         0
-        ]
-       }
-      ],
-      "winkel": "gerade"
-     },
-     {
-      "name": "Wand",
-      "material": "dachlatte",
-      "laenge": 700,
-      "zuschnitt": "",
-      "instanzen": [
-       {
-        "p": [
-         -376.0,
-         446.0,
-         0
-        ],
-        "r": [
-         0,
-         0,
-         90
-        ]
-       },
-       {
-        "p": [
-         376.0,
-         446.0,
-         0
-        ],
-        "r": [
-         0,
-         0,
-         90
-        ]
-       }
-      ],
-      "winkel": "gerade"
-     },
-     {
-      "name": "Dachlatte",
-      "material": "dachlatte",
-      "laenge": 625,
-      "zuschnitt": "45° am First",
-      "instanzen": [
-       {
-        "p": [
-         -238.2,
-         991.8,
-         24
-        ],
-        "r": [
-         0,
-         0,
-         45
-        ]
-       },
-       {
-        "p": [
-         238.2,
-         991.8,
-         24
-        ],
-        "r": [
-         0,
-         0,
-         -45
-        ]
-       }
-      ],
-      "winkel": "45° / gerade"
-     },
-     {
-      "name": "Schornstein",
-      "material": "dachlatte",
-      "laenge": 160,
-      "zuschnitt": "sitzt auf dem Dach",
-      "instanzen": [
-       {
-        "p": [
-         176.0,
-         1142.9,
-         48
-        ],
-        "r": [
-         0,
-         0,
-         90
-        ]
-       }
-      ],
-      "winkel": "unten 45°"
-     },
-     {
-      "name": "Standfuß (quer)",
-      "material": "dachlatte",
-      "laenge": 300,
-      "zuschnitt": "",
-      "instanzen": [
-       {
-        "p": [
-         -240.0,
-         24.0,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       },
-       {
-        "p": [
-         240.0,
-         24.0,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       }
-      ],
-      "winkel": "gerade"
-     }
-    ],
-    "kleinteile": [
-     {
-      "material": "schrauben440",
-      "anzahl": 16
-     },
-     {
-      "material": "winkel",
-      "anzahl": 4
-     }
-    ],
-    "schritte": [
-     "Bodenlatte, Wände, Dachlatten, Schornstein und Füße laut Stückliste zuschneiden. Die Dachlatten bekommen oben 45° – das kann auch eine ältere Kappsäge meist sauber.",
-     "Wände auf die Bodenlatte stellen und von unten verschrauben, innen je einen Winkel setzen.",
-     "Dachlatten vorne auf die Wände legen, am First zusammenstoßen lassen, verschrauben und hinten am First einen Winkel setzen.",
-     "Schornstein auf die rechte Dachlatte schrauben.",
-     "Standfüße quer unter die Bodenlatte schrauben.",
-     "Schleifen, 2× lasieren, Lichterkette entlang des Umrisses befestigen."
     ]
    }
   ]
@@ -1662,8 +1656,8 @@
  {
   "id": "vogelhaus",
   "name": "Vogelfutterhaus",
-  "untertitel": "Mit Futtersilo und geflämmtem Dach",
-  "beschreibung": "Futterhaus mit Futtersilo aus Glas, geflämmtem Satteldach, Schornstein und Sitzstangen. Das Futter rutscht von allein nach und bleibt sauber. Auf Pfahl oder zum Aufhängen.",
+  "untertitel": "Lattendach, Firstbalken und Futtersilo",
+  "beschreibung": "Futterhaus mit geflämmtem Lattendach, Firstbalken, Schornstein und Sitzstangen. In der Mitte ein durchsichtiges Futtersilo – das Futter rieselt von allein nach und bleibt trocken. Auf Pfahl oder zum Aufhängen.",
   "kategorie": "geschenk",
   "sichtbar": true,
   "foto": "",
@@ -1672,12 +1666,12 @@
    {
     "id": "haengen",
     "name": "Zum Aufhängen",
-    "masse": "ca. 34 × 36 × 34 cm, mit Kette",
+    "masse": "ca. 34 × 38 × 38 cm, mit Kette",
     "preis": {
-     "ohne": 55,
-     "mit": 55
+     "ohne": 59,
+     "mit": 59
     },
-    "stunden": 1.75,
+    "stunden": 2.0,
     "licht": [],
     "oberflaeche": "lasur",
     "teile": [
@@ -1872,38 +1866,131 @@
         ]
        }
       ],
-      "winkel": "gerade"
+      "winkel": "Dreieck 38°"
      },
      {
-      "name": "Dachplatte",
-      "material": "leimholz",
-      "laenge": 360,
-      "breite": 220,
+      "name": "Dachlatte",
+      "material": "dachlatte",
+      "laenge": 380,
       "farbe": "#4a3828",
-      "zuschnitt": "geflämmt (dunkel)",
+      "zuschnitt": "danach flämmen und ausbürsten",
       "instanzen": [
        {
         "p": [
-         -85.8,
-         1752.1,
+         -26.3,
+         1802.6,
          0
         ],
         "r": [
          0,
          -90,
-         -51.8
+         128.2
         ]
        },
        {
         "p": [
-         85.8,
-         1752.1,
+         -67.2,
+         1770.5,
          0
         ],
         "r": [
          0,
          -90,
-         51.8
+         128.2
+        ]
+       },
+       {
+        "p": [
+         -108.1,
+         1738.4,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         128.2
+        ]
+       },
+       {
+        "p": [
+         -149.0,
+         1706.2,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         128.2
+        ]
+       },
+       {
+        "p": [
+         26.3,
+         1802.6,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         67.2,
+         1770.5,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         108.1,
+         1738.4,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         149.0,
+         1706.2,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       }
+      ],
+      "winkel": "gerade"
+     },
+     {
+      "name": "Firstbalken",
+      "material": "kantholz58",
+      "laenge": 400,
+      "farbe": "#d2a96c",
+      "zuschnitt": "gerade, Enden leicht anfasen",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         1856.5,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         45
         ]
        }
       ],
@@ -1951,9 +2038,9 @@
       "instanzen": [
        {
         "p": [
-         70,
-         1803.3,
-         -60
+         80,
+         1805.7,
+         -70
         ],
         "r": [
          0,
@@ -1962,21 +2049,21 @@
         ]
        }
       ],
-      "winkel": "gerade"
+      "winkel": "unten 38°"
      },
      {
-      "name": "Futtersilo (Glas)",
+      "name": "Futtersilo (Plastikzylinder)",
       "form": "zylinder",
       "nurModell": true,
       "glas": true,
-      "durchmesser": 95,
+      "durchmesser": 100,
       "hoehe": 150,
       "farbe": "#e6f2ee",
       "instanzen": [
        {
         "p": [
          0,
-         1601,
+         1593,
          0
         ],
         "r": [
@@ -1986,76 +2073,23 @@
         ]
        }
       ]
-     },
-     {
-      "name": "Glashalter",
-      "material": "leiste20",
-      "laenge": 120,
-      "zuschnitt": "",
-      "instanzen": [
-       {
-        "p": [
-         0,
-         1522,
-         -58
-        ],
-        "r": [
-         0,
-         0,
-         0
-        ]
-       },
-       {
-        "p": [
-         0,
-         1522,
-         58
-        ],
-        "r": [
-         0,
-         0,
-         0
-        ]
-       },
-       {
-        "p": [
-         -58,
-         1522,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       },
-       {
-        "p": [
-         58,
-         1522,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       }
-      ],
-      "winkel": "gerade"
      }
     ],
     "kleinteile": [
      {
       "material": "schrauben330",
-      "anzahl": 30
+      "anzahl": 40
      },
      {
       "material": "leim",
       "anzahl": 1
      },
      {
-      "material": "einmachglas",
+      "material": "acrylrohr",
+      "anzahl": 1
+     },
+     {
+      "material": "montagekleber",
       "anzahl": 1
      },
      {
@@ -2064,26 +2098,27 @@
      }
     ],
     "schritte": [
-     "Boden, Giebel und Dachplatten aus der Leimholzplatte sägen (Zuschnittplan). Giebel: Dreieck 280 mm breit, 110 mm hoch.",
+     "Boden und die beiden Giebel aus der Leimholzplatte sägen (Zuschnittplan). Giebel: Dreieck 280 mm breit, 110 mm hoch.",
      "Randleisten auf den Boden leimen und schrauben, an einer Ecke 2 cm Lücke lassen – da läuft Regenwasser ab.",
      "Eckpfosten auf den Boden schrauben (von unten vorbohren).",
      "Giebel vorne und hinten an die Pfosten schrauben.",
-     "Dachplatten auflegen und in die Giebel schrauben. Die First-Kante anschrägen oder die Fuge abdichten.",
-     "Dachplatten und Schornstein mit dem Gasbrenner flämmen und ausbürsten, den Rest mit ungiftiger, wasserbasierter Lasur nur außen streichen – die Futterfläche bleibt unbehandelt.",
+     "Dach: 8 Dachlatten (4 pro Seite) mit 4 mm Fuge auf die Giebel schrauben, oben beginnend. Vorne und hinten stehen sie 4 cm über.",
+     "Firstbalken (Kantholz 58 × 58) über Eck auf den First legen und von unten durch die obersten Dachlatten verschrauben – er deckt die Fuge am First ab.",
+     "Dachlatten und Schornstein vor dem Montieren mit dem Gasbrenner flämmen und ausbürsten (dunkel), Firstbalken natur lassen. Den Rest mit ungiftiger, wasserbasierter Lasur nur außen streichen – die Futterfläche bleibt unbehandelt.",
      "Sitzstangen vorne und hinten an die Randleisten schrauben, Schornstein auf die rechte Dachseite.",
-     "Futtersilo: Glashalter-Leisten als Quadrat auf den Boden leimen, mit 2 Abstandsklötzchen (ca. 8 mm), damit Futter unten herausrutschen kann. Glas füllen, Deckel ab, umgedreht in den Halter stellen.",
+     "Futtersilo: In den Plastikzylinder unten zwei Kerben (ca. 1,5 cm) sägen, damit Futter herausrieseln kann. Zylinder mittig auf den Boden stellen und an zwei Punkten mit Montagekleber fixieren. Von oben füllen.",
      "Zwei Ringschrauben oben durch die Giebelspitzen schrauben (vorbohren), Kette einhängen. Am besten an einen Ast hängen, an dem keine Katze hochklettern kann."
     ]
    },
    {
     "id": "pfahl",
     "name": "Mit Pfahl",
-    "masse": "ca. 34 × 36 cm, ca. 1,40 m hoch",
+    "masse": "ca. 34 × 38 cm, ca. 1,45 m hoch",
     "preis": {
-     "ohne": 75,
-     "mit": 75
+     "ohne": 79,
+     "mit": 79
     },
-    "stunden": 2.25,
+    "stunden": 2.5,
     "licht": [],
     "oberflaeche": "lasur",
     "teile": [
@@ -2278,38 +2313,131 @@
         ]
        }
       ],
-      "winkel": "gerade"
+      "winkel": "Dreieck 38°"
      },
      {
-      "name": "Dachplatte",
-      "material": "leimholz",
-      "laenge": 360,
-      "breite": 220,
+      "name": "Dachlatte",
+      "material": "dachlatte",
+      "laenge": 380,
       "farbe": "#4a3828",
-      "zuschnitt": "geflämmt (dunkel)",
+      "zuschnitt": "danach flämmen und ausbürsten",
       "instanzen": [
        {
         "p": [
-         -85.8,
-         1752.1,
+         -26.3,
+         1802.6,
          0
         ],
         "r": [
          0,
          -90,
-         -51.8
+         128.2
         ]
        },
        {
         "p": [
-         85.8,
-         1752.1,
+         -67.2,
+         1770.5,
          0
         ],
         "r": [
          0,
          -90,
-         51.8
+         128.2
+        ]
+       },
+       {
+        "p": [
+         -108.1,
+         1738.4,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         128.2
+        ]
+       },
+       {
+        "p": [
+         -149.0,
+         1706.2,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         128.2
+        ]
+       },
+       {
+        "p": [
+         26.3,
+         1802.6,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         67.2,
+         1770.5,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         108.1,
+         1738.4,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       },
+       {
+        "p": [
+         149.0,
+         1706.2,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         -128.2
+        ]
+       }
+      ],
+      "winkel": "gerade"
+     },
+     {
+      "name": "Firstbalken",
+      "material": "kantholz58",
+      "laenge": 400,
+      "farbe": "#d2a96c",
+      "zuschnitt": "gerade, Enden leicht anfasen",
+      "instanzen": [
+       {
+        "p": [
+         0,
+         1856.5,
+         0
+        ],
+        "r": [
+         0,
+         -90,
+         45
         ]
        }
       ],
@@ -2357,9 +2485,9 @@
       "instanzen": [
        {
         "p": [
-         70,
-         1803.3,
-         -60
+         80,
+         1805.7,
+         -70
         ],
         "r": [
          0,
@@ -2368,21 +2496,21 @@
         ]
        }
       ],
-      "winkel": "gerade"
+      "winkel": "unten 38°"
      },
      {
-      "name": "Futtersilo (Glas)",
+      "name": "Futtersilo (Plastikzylinder)",
       "form": "zylinder",
       "nurModell": true,
       "glas": true,
-      "durchmesser": 95,
+      "durchmesser": 100,
       "hoehe": 150,
       "farbe": "#e6f2ee",
       "instanzen": [
        {
         "p": [
          0,
-         1601,
+         1593,
          0
         ],
         "r": [
@@ -2392,63 +2520,6 @@
         ]
        }
       ]
-     },
-     {
-      "name": "Glashalter",
-      "material": "leiste20",
-      "laenge": 120,
-      "zuschnitt": "",
-      "instanzen": [
-       {
-        "p": [
-         0,
-         1522,
-         -58
-        ],
-        "r": [
-         0,
-         0,
-         0
-        ]
-       },
-       {
-        "p": [
-         0,
-         1522,
-         58
-        ],
-        "r": [
-         0,
-         0,
-         0
-        ]
-       },
-       {
-        "p": [
-         -58,
-         1522,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       },
-       {
-        "p": [
-         58,
-         1522,
-         0
-        ],
-        "r": [
-         0,
-         -90,
-         0
-        ]
-       }
-      ],
-      "winkel": "gerade"
      },
      {
       "name": "Pfahl",
@@ -2508,14 +2579,18 @@
     "kleinteile": [
      {
       "material": "schrauben330",
-      "anzahl": 30
+      "anzahl": 40
      },
      {
       "material": "leim",
       "anzahl": 1
      },
      {
-      "material": "einmachglas",
+      "material": "acrylrohr",
+      "anzahl": 1
+     },
+     {
+      "material": "montagekleber",
       "anzahl": 1
      },
      {
@@ -2528,14 +2603,15 @@
      }
     ],
     "schritte": [
-     "Boden, Giebel und Dachplatten aus der Leimholzplatte sägen (Zuschnittplan). Giebel: Dreieck 280 mm breit, 110 mm hoch.",
+     "Boden und die beiden Giebel aus der Leimholzplatte sägen (Zuschnittplan). Giebel: Dreieck 280 mm breit, 110 mm hoch.",
      "Randleisten auf den Boden leimen und schrauben, an einer Ecke 2 cm Lücke lassen – da läuft Regenwasser ab.",
      "Eckpfosten auf den Boden schrauben (von unten vorbohren).",
      "Giebel vorne und hinten an die Pfosten schrauben.",
-     "Dachplatten auflegen und in die Giebel schrauben. Die First-Kante anschrägen oder die Fuge abdichten.",
-     "Dachplatten und Schornstein mit dem Gasbrenner flämmen und ausbürsten, den Rest mit ungiftiger, wasserbasierter Lasur nur außen streichen – die Futterfläche bleibt unbehandelt.",
+     "Dach: 8 Dachlatten (4 pro Seite) mit 4 mm Fuge auf die Giebel schrauben, oben beginnend. Vorne und hinten stehen sie 4 cm über.",
+     "Firstbalken (Kantholz 58 × 58) über Eck auf den First legen und von unten durch die obersten Dachlatten verschrauben – er deckt die Fuge am First ab.",
+     "Dachlatten und Schornstein vor dem Montieren mit dem Gasbrenner flämmen und ausbürsten (dunkel), Firstbalken natur lassen. Den Rest mit ungiftiger, wasserbasierter Lasur nur außen streichen – die Futterfläche bleibt unbehandelt.",
      "Sitzstangen vorne und hinten an die Randleisten schrauben, Schornstein auf die rechte Dachseite.",
-     "Futtersilo: Glashalter-Leisten als Quadrat auf den Boden leimen, mit 2 Abstandsklötzchen (ca. 8 mm), damit Futter unten herausrutschen kann. Glas füllen, Deckel ab, umgedreht in den Halter stellen.",
+     "Futtersilo: In den Plastikzylinder unten zwei Kerben (ca. 1,5 cm) sägen, damit Futter herausrieseln kann. Zylinder mittig auf den Boden stellen und an zwei Punkten mit Montagekleber fixieren. Von oben füllen.",
      "Pfahl (58 × 58, 1,50 m) lasieren, besonders das untere Ende gut streichen.",
      "Die beiden Stützklötze mit 45° an den Enden zuschneiden und als Kopfband links und rechts an den Pfahl schrauben.",
      "Vogelhaus mittig auf den Pfahl setzen und von oben durch den Boden mit 2 Schrauben 4×80 festschrauben, dazu die Stützklötze von unten in den Boden.",

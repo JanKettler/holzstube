@@ -142,11 +142,12 @@ export function erstelleViewer(container, optionen = {}) {
     const zW = new THREE.Vector3(0, 0, 1).applyQuaternion(mesh.quaternion);
     const spalt = abstand * 0.06;
     let off;
-    if (t.profil && t.profil.length > 2) off = [0, 0, Math.sign(zW.z || 1) * (D / 2 + spalt)];
+    const istPlatte = t.profil && t.profil.length > 2 && (M[t.material] || {}).typ !== "linear";
+    if (istPlatte) off = [0, 0, Math.sign(zW.z || 1) * (D / 2 + spalt)];
     else if (Math.abs(yW.z) > Math.abs(zW.z)) off = [0, Math.sign(yW.z) * (B / 2 + spalt), 0];
     else off = [0, 0, Math.sign(zW.z || 1) * (D / 2 + spalt)];
     const pts = [];
-    if (t.profil && t.profil.length > 2) {
+    if (istPlatte) {
       const p = t.profil;
       for (let i = 0; i < p.length; i++) {
         const [x1, y1] = p[i], [x2, y2] = p[(i + 1) % p.length];
@@ -182,17 +183,27 @@ export function erstelleViewer(container, optionen = {}) {
           color: t.farbe || "#eeeeee", roughness: t.glas ? 0.1 : 0.55,
           transparent: !!t.glas, opacity: t.glas ? 0.35 : 1,
         });
+      } else if (t.profil && t.profil.length > 2 && m.typ === "linear") {
+        // Latte mit schrägen Enden: Profil in Länge × Dicke, extrudiert über die Breite
+        const form = new THREE.Shape(t.profil.map(([x, y]) => new THREE.Vector2(x, y)));
+        const B = m.breite || 48;
+        geo = new THREE.ExtrudeGeometry(form, { depth: B, bevelEnabled: false });
+        geo.translate(0, 0, -B / 2);
+        geo.rotateX(Math.PI / 2);
+        geo.computeVertexNormals();
+        const key = (t.material || "x") + (t.farbe || "") + "-latte";
+        mat = matCache[key] ||= holzMaterial(t.farbe || m.farbe, geflammt, true);
       } else if (t.profil && t.profil.length > 2) {
         const form = new THREE.Shape(t.profil.map(([x, y]) => new THREE.Vector2(x, y)));
         const D = m.dicke || 18;
         geo = new THREE.ExtrudeGeometry(form, { depth: D, bevelEnabled: false });
         geo.translate(0, 0, -D / 2);
-        mat = holzMaterial(m.farbe, geflammt, true);
+        mat = holzMaterial(t.farbe || m.farbe, geflammt, true);
       } else {
         const { L, B, D } = teilMasse(t, M);
         if (!L || !B || !D) continue;
         geo = new THREE.BoxGeometry(L, B, D);
-        const key = t.material || "x";
+        const key = (t.material || "x") + (t.farbe || "");
         mat = matCache[key] ||= holzMaterial(t.farbe || m.farbe, geflammt, false);
         // Maserung passend zur Länge strecken
         if (mat.map) mat.map.repeat.set(1, 1);

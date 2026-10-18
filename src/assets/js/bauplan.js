@@ -49,7 +49,7 @@ function profilBox(pts) {
 // Abmessungen in lokalen Achsen: X = Länge, Y = Breite, Z = Dicke
 export function teilMasse(t, M) {
   const m = M[t.material] || {};
-  if (t.profil && t.profil.length > 2) {
+  if (t.profil && t.profil.length > 2 && m.typ !== "linear") {
     const b = profilBox(t.profil);
     return { L: b.w, B: b.h, D: m.dicke || 18 };
   }
@@ -59,7 +59,7 @@ export function teilMasse(t, M) {
 
 export function teilOberflaeche(t, M) {
   const { L, B, D } = teilMasse(t, M);
-  if (t.profil && t.profil.length > 2) return 2 * polygonFlaeche(t.profil) + polygonUmfang(t.profil) * D;
+  if (t.profil && t.profil.length > 2 && (M[t.material] || {}).typ !== "linear") return 2 * polygonFlaeche(t.profil) + polygonUmfang(t.profil) * D;
   return 2 * (L * B + L * D + B * D);
 }
 
@@ -377,6 +377,11 @@ export function vorderansicht(v, M) {
       const r = (t.durchmesser || 20) / 2, h = (t.hoehe || 50) / 2;
       lokal = [[-r, -h, -r], [r, -h, -r], [r, h, -r], [-r, h, -r], [-r, -h, r], [r, -h, r], [r, h, r], [-r, h, r]];
       lokal.konkav = null;
+    } else if (t.profil && t.profil.length > 2 && m.typ === "linear") {
+      // Latte mit schrägen Enden: Profil liegt in Länge × Dicke, Tiefe = Breite der Latte
+      const b = (m.breite || 48) / 2;
+      lokal = t.profil.flatMap(([x, y]) => [[x, -b, y], [x, b, y]]);
+      lokal.konkavLatte = t.profil;
     } else if (t.profil && t.profil.length > 2) {
       const d = (m.dicke || 18) / 2;
       lokal = t.profil.flatMap(([x, y]) => [[x, y, -d], [x, y, d]]);
@@ -397,7 +402,9 @@ export function vorderansicht(v, M) {
       const p = i.p || [0, 0, 0];
       let poly;
       const flachVorne = lokal.konkav && Math.abs(R[2][2]) > 0.99;
+      const latteVorne = lokal.konkavLatte && Math.abs(R[2][1]) > 0.99;
       if (flachVorne) poly = lokal.konkav.map(([x, y]) => anwenden(R, p, [x, y, 0]).slice(0, 2));
+      else if (latteVorne) poly = lokal.konkavLatte.map(([x, z]) => anwenden(R, p, [x, 0, z]).slice(0, 2));
       else poly = huelle(lokal.map((q) => anwenden(R, p, q).slice(0, 2)));
       const z = anwenden(R, p, [0, 0, 0])[2];
       formen.push({ poly, z, name: t.name, farbe: t.farbe || m.farbe, modell: !!t.nurModell });

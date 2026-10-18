@@ -203,11 +203,19 @@
    "preis": 8.99
   },
   {
-   "id": "einmachglas",
-   "name": "Einmachglas ca. 0,75 l (Futtersilo)",
+   "id": "acrylrohr",
+   "name": "Plastikzylinder / Acrylglas-Rohr Ø 100 mm, ca. 15 cm (Futtersilo)",
    "typ": "stueck",
    "packung": 1,
-   "preis": 1.99
+   "preis": 9.99
+  },
+  {
+   "id": "montagekleber",
+   "name": "Montagekleber, wetterfest (Kartusche reicht für ca. 5 Häuser)",
+   "typ": "stueck",
+   "packung": 5,
+   "einheit": "Anwendung",
+   "preis": 5.99
   },
   {
    "id": "lasur",
