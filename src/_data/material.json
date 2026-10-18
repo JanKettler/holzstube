@@ -1,11 +1,11 @@
 {
- "hinweis": "Einkauf bei Bauhaus. Latten und Kantholz in 2 m oder 2,5 m (passt ins Auto) – die Einkaufsliste wählt automatisch die günstigere Länge. Preise aus deinen bisherigen Listen bzw. geschätzt – beim nächsten Einkauf die echten Preise hier eintragen. Holz selbst aussuchen: gerade, wenig Äste. Unbehandelte, sägeraue Fichte nehmen – keine grün imprägnierte Dachlatte.",
+ "hinweis": "Einkauf bei Bauhaus. Latten und Kantholz in 2 m oder 2,5 m (passt ins Auto) – die Einkaufsliste wählt automatisch die günstigere Länge. Holzpreise von bauhaus.info (Stand Oktober 2026), Kleinteile und Lichterketten geschätzt – beim nächsten Einkauf die echten Preise hier eintragen. Holz selbst aussuchen: gerade, wenig Äste. Unbehandelte, sägeraue Fichte nehmen – keine grün imprägnierte Dachlatte.",
  "saegeschnitt": 4,
  "stundensatz": 10,
  "materialien": [
   {
    "id": "dachlatte",
-   "name": "Latte Fichte sägerau 24 × 48 mm",
+   "name": "Rahmenholz Fichte 24 × 48 mm",
    "typ": "linear",
    "breite": 48,
    "dicke": 24,
@@ -17,7 +17,7 @@
   },
   {
    "id": "kantholz58",
-   "name": "Kantholz Fichte 58 × 58 mm",
+   "name": "Rahmenholz Fichte 58 × 58 mm",
    "typ": "linear",
    "breite": 58,
    "dicke": 58,
@@ -34,27 +34,37 @@
    "breite": 12,
    "dicke": 12,
    "laenge": 1000,
-   "preis": 1.99,
+   "preis": 2.35,
    "farbe": "#d9b98c"
   },
   {
+   "id": "bock",
+   "name": "Holz des Klappbocks (nur Modell)",
+   "typ": "modell",
+   "breite": 45,
+   "dicke": 22,
+   "farbe": "#d2a96c"
+  },
+  {
    "id": "leiste20",
-   "name": "Quadratleiste Kiefer 20 × 20 mm",
+   "name": "Quadratleiste Fichte/Kiefer 20 × 20 mm",
    "typ": "linear",
    "breite": 20,
    "dicke": 20,
    "laenge": 2400,
-   "preis": 2.99,
+   "preis": 6.9,
+   "laenge2": 1000,
+   "preis2": 3.35,
    "farbe": "#d6b07a"
   },
   {
    "id": "leimholz",
-   "name": "Leimholzplatte Fichte 18 mm, 1200 × 600 mm",
+   "name": "Leimholzplatte Fichte A/B 18 mm, 800 × 400 mm",
    "typ": "platte",
    "dicke": 18,
-   "laenge": 1200,
-   "breite": 600,
-   "preis": 24.99,
+   "laenge": 800,
+   "breite": 400,
+   "preis": 13.25,
    "farbe": "#dcb47e",
    "notiz": "Für dauerhaft draußen besser eine Dreischichtplatte (wetterfest verleimt) nehmen."
   },
@@ -85,6 +95,13 @@
    "typ": "stueck",
    "packung": 100,
    "preis": 6.99
+  },
+  {
+   "id": "klappbock",
+   "name": "Holzklappbock Standard, Kiefer, 74 cm (Bauhaus)",
+   "typ": "stueck",
+   "packung": 1,
+   "preis": 6.95
   },
   {
    "id": "winkel",

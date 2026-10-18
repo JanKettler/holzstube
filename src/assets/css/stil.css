@@ -484,3 +484,16 @@ ol.schrittliste li { margin-bottom: 8px; padding-left: 4px; }
 .zs-nr { white-space: nowrap; }
 .zs-zeile { grid-template-columns: 46px 1fr 96px; }
 @media print { .winkel { border: 1.5px solid #000; background: none; color: #000; } }
+
+/* Zuschnitt als Stäbe mit schrägen Enden */
+.zs-spur { position: relative; height: 40px; }
+.zs-stab { position: relative; height: 100%; background: repeating-linear-gradient(135deg, #f3ecdf 0 6px, #ebe2d1 6px 12px); border: 1px dashed #cbbd9f; border-radius: 3px; }
+.zs-st {
+  position: absolute; top: 0; bottom: 0; background: #e3c493; border-right: 2px solid #6e5232; border-left: 2px solid #6e5232;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.05; overflow: hidden;
+  font-size: 13px; color: #3b2d1d;
+}
+.zs-st b { font-weight: 700; }
+.zs-st small { font-size: 10.5px; font-weight: 700; color: #7a4a0c; white-space: nowrap; }
+.zs-st.schraeg { background: #efb767; }
+@media print { .zs-st { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .zs-stab { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }

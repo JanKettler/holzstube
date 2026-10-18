@@ -505,7 +505,7 @@ function teilKarte(t, ti, vi) {
   return `<div class="teil-karte" data-teil="${ti}">
     <div class="teil-oben">
       <div class="feld"><label>Teil</label><input type="text" data-pfad="${pf}.name" value="${esc(t.name)}"></div>
-      <div class="feld"><label>Material</label><select data-pfad="${pf}.material" data-neu-zeichnen>${materialOptionen(t.material, (x) => x.typ === "linear" || x.typ === "platte")}</select></div>
+      <div class="feld"><label>Material</label><select data-pfad="${pf}.material" data-neu-zeichnen>${materialOptionen(t.material, (x) => x.typ === "linear" || x.typ === "platte" || x.typ === "modell")}</select></div>
       <div class="feld"><label>Länge mm</label><input type="number" inputmode="decimal" data-typ="zahl" data-pfad="${pf}.laenge" value="${t.laenge ?? ""}"></div>
       <div class="feld"><label>${platte ? "Breite mm" : "Querschnitt"}</label>${platte
         ? `<input type="number" inputmode="decimal" data-typ="zahl" data-pfad="${pf}.breite" value="${t.breite ?? ""}">`
@@ -771,7 +771,7 @@ function bildVerkleinern(datei, max) {
 // ======================================================================
 // Material & Preise
 // ======================================================================
-const TYPEN = { linear: "Latte / Kantholz / Leiste", platte: "Platte", stueck: "Stückware / Packung", lasur: "Lasur / Farbe" };
+const TYPEN = { linear: "Latte / Kantholz / Leiste", platte: "Platte", stueck: "Stückware / Packung", lasur: "Lasur / Farbe", modell: "Nur fürs 3D-Modell (Kaufteil)" };
 function materialFelder(m, i) {
   const pf = `materialien.${i}`;
   const f = (k, label, step = "1") => `<div class="feld"><label>${label}</label><input type="number" inputmode="decimal" step="${step}" data-typ="zahl" data-pfad="${pf}.${k}" value="${m[k] ?? ""}"></div>`;
@@ -781,6 +781,7 @@ function materialFelder(m, i) {
       + f("laenge2", "Rohlänge 2 (mm, optional)") + f("preis2", "Preis Länge 2 (€)", "0.01"),
     platte: f("laenge", "Länge mm") + f("breite", "Breite mm") + f("dicke", "Dicke mm"),
     stueck: f("packung", "Stück pro Packung"),
+    modell: f("breite", "Breite mm") + f("dicke", "Dicke mm"),
     lasur: f("liter", "Liter pro Dose", "0.05") + f("ergiebigkeit", "m² pro Liter") + f("anstriche", "Anstriche"),
   }[m.typ] || "";
   return `<div class="teil-karte" data-mat="${i}">

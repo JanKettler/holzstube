@@ -83,13 +83,25 @@ export function winkelText(t) {
   const g = String(t.zuschnitt || "").match(/\d+(?:,\d+)?\s*°/g);
   return g ? g.map((x) => x.replace(/\s/g, "")).join(" / ") : "gerade";
 }
+// „22,5° / 22,5°“ → zwei Enden; „Spitze 18°“ = Winkel zur Längskante
+export function winkelEnden(w) {
+  if (!w || !/°/.test(w)) return [null, null];
+  const teile = String(w).split(/\s*[\/·]\s*/);
+  const lies = (t) => {
+    const g = parseFloat(String(t || "").replace(",", ".").replace(/[^0-9.]/g, ""));
+    return g > 0 && /°/.test(t) ? { grad: g, spitze: /spitze/i.test(t) } : null;
+  };
+  if (teile.length === 1) return /unten/i.test(teile[0]) ? [null, lies(teile[0])] : [lies(teile[0]), null];
+  return [lies(teile[0]), lies(teile[1])];
+}
+
 export const winkelHtml = (w) => /°/.test(w || "") ? `<span class="winkel">${w}</span>` : `<span class="winkel gerade">${w || "gerade"}</span>`;
 
 export function stueckliste(auftraege, produkte, M) {
   const rows = new Map();
   for (const { p, v, n } of sammleTeile(auftraege, produkte, M)) {
     for (const t of v.teile || []) {
-      if (t.nurModell || !M[t.material]) continue;
+      if (t.nurModell || t.kaufteil || !M[t.material] || M[t.material].typ === "modell") continue;
       const k = teilAnzahl(t) * n;
       const mat = M[t.material];
       const dims = mat.typ === "platte" ? `${t.laenge} × ${t.breite}` : `${t.laenge}`;
@@ -223,7 +235,7 @@ export function einkaufsliste(auftraege, produkte, materialDaten) {
       const k = teilAnzahl(t) * n;
       for (let i = 0; i < k; i++) {
         const label = `${t.name} (${p.name} ${v.name})`;
-        if (m.typ === "linear") (linear[m.id] ||= []).push({ l: +t.laenge, name: t.name, label });
+        if (m.typ === "linear") (linear[m.id] ||= []).push({ l: +t.laenge, name: t.name, label, winkel: winkelText(t), B: m.breite || 48 });
         else if (m.typ === "platte") {
           const d = teilMasse(t, M);
           (platte[m.id] ||= []).push({ w: d.L, h: d.B, name: t.name, label, profil: t.profil });
@@ -427,17 +439,23 @@ export function zeichnungSVG(v, M, opt = {}) {
 export function zuschnittSVG(z) {
   const teile = [];
   for (const L of z.linear) {
-    const zeilen = L.stangen.map((st, i) => {
-      let x = 0;
-      const rects = st.schnitte.map((s) => {
-        const r = `<g><rect x="${x}" y="0" width="${s.l}" height="60" class="zs-teil"/><text x="${x + s.l / 2}" y="38" text-anchor="middle">${s.l}</text><title>${s.label}</title></g>`;
-        x += s.l + 4;
-        return r;
-      }).join("");
+    const maxL = Math.max(L.laenge, ...L.stangen.map((st) => st.laenge || 0));
+    const zeilen = L.stangen.map((st) => {
       const sl = st.laenge || L.laenge;
-      return `<div class="zs-zeile"><span class="zs-nr">${meterText(sl)}</span><svg viewBox="-2 -2 ${L.laenge + 4} 64" preserveAspectRatio="none" class="zs-stange"><rect x="0" y="0" width="${sl}" height="60" class="zs-rest"/>${rects}</svg><span class="zs-restlabel">Rest ${Math.round(st.rest)} mm</span></div>`;
+      let x = 0;
+      const stuecke = st.schnitte.map((s) => {
+        const left = (x / sl) * 100, width = (s.l / sl) * 100;
+        x += s.l + 4;
+        const [e1, e2] = winkelEnden(s.winkel);
+        const off = (e) => (!e ? 0 : Math.min(45, ((e.spitze ? s.B / Math.tan((e.grad * Math.PI) / 180) : s.B * Math.tan((e.grad * Math.PI) / 180)) / s.l) * 100));
+        const o1 = off(e1), o2 = off(e2);
+        const clip = o1 || o2 ? ` clip-path:polygon(${o1.toFixed(1)}% 0,${(100 - o2).toFixed(1)}% 0,100% 100%,0 100%);` : "";
+        const w = /°/.test(s.winkel || "") ? `<small>${s.winkel}</small>` : "";
+        return `<div class="zs-st${o1 || o2 ? " schraeg" : ""}" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%;${clip}" title="${s.label}"><b>${s.l}</b>${w}</div>`;
+      }).join("");
+      return `<div class="zs-zeile"><span class="zs-nr">${meterText(sl)}</span><div class="zs-spur"><div class="zs-stab" style="width:${((sl / maxL) * 100).toFixed(2)}%">${stuecke}</div></div><span class="zs-restlabel">Rest ${Math.round(st.rest)} mm</span></div>`;
     }).join("");
-    teile.push(`<section class="zs-block"><h4>${L.name}</h4><p class="leise">${(() => { const c = {}; L.stangen.forEach((st) => (c[st.laenge] = (c[st.laenge] || 0) + 1)); return Object.keys(c).sort((a, b) => b - a).map((l) => `${c[l]} × ${meterText(+l)}`).join(" + "); })()} · Schnittbreite eingerechnet</p>${zeilen}${L.zuLang.length ? `<p class="warnung">Zu lang für eine Stange: ${L.zuLang.map((s) => s.label + " " + s.l + " mm").join(", ")}</p>` : ""}</section>`);
+    teile.push(`<section class="zs-block"><h4>${L.name}</h4><p class="leise">${(() => { const c = {}; L.stangen.forEach((st) => (c[st.laenge] = (c[st.laenge] || 0) + 1)); return Object.keys(c).sort((a, b) => b - a).map((l) => `${c[l]} × ${meterText(+l)}`).join(" + "); })()} · Schnittbreite eingerechnet · <span class="winkel" style="font-size:12px">orange</span> = schräger Schnitt</p>${zeilen}${L.zuLang.length ? `<p class="warnung">Zu lang für eine Stange: ${L.zuLang.map((s) => s.label + " " + s.l + " mm").join(", ")}</p>` : ""}</section>`);
   }
   for (const P of z.platten) {
     const svgs = P.platten.map((pl, i) => {

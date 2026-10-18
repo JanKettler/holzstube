@@ -3,7 +3,7 @@
   "id": "holzstern",
   "name": "Holzstern XXL",
   "untertitel": "Aus fünf Holzböcken – der große Klassiker",
-  "beschreibung": "Fünf verschraubte Holzböcke ergeben einen großen Stern. Dicht mit Lichterkette umwickelt leuchtet er abends wie ein Weihnachtsstern im Vorgarten.",
+  "beschreibung": "Fünf Holzböcke, zum Stern verschraubt, lasiert und dicht mit Lichterkette umwickelt. Rund 1,7 Meter groß – leuchtet abends wie ein Weihnachtsstern im Vorgarten.",
   "kategorie": "draussen",
   "sichtbar": true,
   "foto": "",
@@ -13,12 +13,12 @@
    {
     "id": "xxl",
     "name": "XXL",
-    "masse": "ca. 188 × 178 cm",
+    "masse": "ca. 174 × 164 cm",
     "preis": {
-     "ohne": 59,
-     "mit": 99
+     "ohne": 69,
+     "mit": 109
     },
-    "stunden": 2.5,
+    "stunden": 1.5,
     "licht": [
      {
       "material": "lichterkette_cluster",
@@ -28,15 +28,15 @@
     "oberflaeche": "lasur",
     "teile": [
      {
-      "name": "Schenkel",
-      "material": "dachlatte",
-      "laenge": 700,
-      "zuschnitt": "Spitze mit Stichsäge, unten mit Kappsäge",
+      "name": "Bein (Klappbock)",
+      "material": "bock",
+      "laenge": 640,
+      "kaufteil": true,
       "instanzen": [
        {
         "p": [
-         -108.2,
-         1422.1,
+         -98.9,
+         1301.3,
          12
         ],
         "r": [
@@ -47,8 +47,20 @@
        },
        {
         "p": [
-         108.2,
-         1422.1,
+         -98.9,
+         1301.3,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         -108.0
+        ]
+       },
+       {
+        "p": [
+         98.9,
+         1301.3,
          12
         ],
         "r": [
@@ -59,8 +71,20 @@
        },
        {
         "p": [
-         -633.2,
-         883.5,
+         98.9,
+         1301.3,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         -72.0
+        ]
+       },
+       {
+        "p": [
+         -578.9,
+         808.8,
          12
         ],
         "r": [
@@ -71,8 +95,20 @@
        },
        {
         "p": [
-         -566.3,
-         1089.3,
+         -578.9,
+         808.8,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         -36.0
+        ]
+       },
+       {
+        "p": [
+         -517.8,
+         996.9,
          12
         ],
         "r": [
@@ -83,8 +119,20 @@
        },
        {
         "p": [
-         -283.2,
-         217.7,
+         -517.8,
+         996.9,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         -0.0
+        ]
+       },
+       {
+        "p": [
+         -258.9,
+         200.1,
          12
         ],
         "r": [
@@ -95,8 +143,20 @@
        },
        {
         "p": [
-         -458.2,
-         344.9,
+         -258.9,
+         200.1,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         36.0
+        ]
+       },
+       {
+        "p": [
+         -418.9,
+         316.4,
          12
         ],
         "r": [
@@ -107,8 +167,20 @@
        },
        {
         "p": [
-         458.2,
-         344.9,
+         -418.9,
+         316.4,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         72.0
+        ]
+       },
+       {
+        "p": [
+         418.9,
+         316.4,
          12
         ],
         "r": [
@@ -119,8 +191,20 @@
        },
        {
         "p": [
-         283.2,
-         217.7,
+         418.9,
+         316.4,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         108.0
+        ]
+       },
+       {
+        "p": [
+         258.9,
+         200.1,
          12
         ],
         "r": [
@@ -131,8 +215,20 @@
        },
        {
         "p": [
-         566.3,
-         1089.3,
+         258.9,
+         200.1,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         144.0
+        ]
+       },
+       {
+        "p": [
+         517.8,
+         996.9,
          12
         ],
         "r": [
@@ -143,9 +239,33 @@
        },
        {
         "p": [
-         633.2,
-         883.5,
+         517.8,
+         996.9,
+         -12
+        ],
+        "r": [
+         0,
+         0,
+         -180.0
+        ]
+       },
+       {
+        "p": [
+         578.9,
+         808.8,
          12
+        ],
+        "r": [
+         0,
+         0,
+         -144.0
+        ]
+       },
+       {
+        "p": [
+         578.9,
+         808.8,
+         -12
         ],
         "r": [
          0,
@@ -154,19 +274,19 @@
         ]
        }
       ],
-      "winkel": "Spitze 18° · unten 36°"
+      "winkel": "gerade"
      },
      {
-      "name": "Querstrebe (Bock)",
-      "material": "dachlatte",
-      "laenge": 405,
-      "zuschnitt": "gegenläufig (Trapez)",
+      "name": "Querstrebe (Klappbock)",
+      "material": "bock",
+      "laenge": 345,
+      "kaufteil": true,
       "instanzen": [
        {
         "p": [
          0.0,
-         1235.7,
-         36
+         1167.4,
+         30
         ],
         "r": [
          0,
@@ -176,9 +296,21 @@
        },
        {
         "p": [
-         -422.5,
-         928.8,
-         36
+         0.0,
+         1167.4,
+         -30
+        ],
+        "r": [
+         0,
+         0,
+         0.0
+        ]
+       },
+       {
+        "p": [
+         -421.0,
+         861.5,
+         30
         ],
         "r": [
          0,
@@ -188,9 +320,21 @@
        },
        {
         "p": [
-         -261.1,
-         432.1,
-         36
+         -421.0,
+         861.5,
+         -30
+        ],
+        "r": [
+         0,
+         0,
+         72.0
+        ]
+       },
+       {
+        "p": [
+         -260.2,
+         366.6,
+         30
         ],
         "r": [
          0,
@@ -200,9 +344,21 @@
        },
        {
         "p": [
-         261.1,
-         432.1,
-         36
+         -260.2,
+         366.6,
+         -30
+        ],
+        "r": [
+         0,
+         0,
+         144.0
+        ]
+       },
+       {
+        "p": [
+         260.2,
+         366.6,
+         30
         ],
         "r": [
          0,
@@ -212,9 +368,33 @@
        },
        {
         "p": [
-         422.5,
-         928.8,
-         36
+         260.2,
+         366.6,
+         -30
+        ],
+        "r": [
+         0,
+         0,
+         -144.0
+        ]
+       },
+       {
+        "p": [
+         421.0,
+         861.5,
+         30
+        ],
+        "r": [
+         0,
+         0,
+         -72.0
+        ]
+       },
+       {
+        "p": [
+         421.0,
+         861.5,
+         -30
         ],
         "r": [
          0,
@@ -223,19 +403,19 @@
         ]
        }
       ],
-      "winkel": "18° / 18°"
+      "winkel": "gerade"
      },
      {
       "name": "Stützlatte (Aufsteller)",
       "material": "dachlatte",
-      "laenge": 965,
+      "laenge": 885,
       "zuschnitt": "damit sie flach aufliegt",
       "instanzen": [
        {
         "p": [
          0,
-         463.9,
-         -161.1
+         425.8,
+         -172.7
         ],
         "r": [
          0,
@@ -249,12 +429,16 @@
     ],
     "kleinteile": [
      {
-      "material": "schrauben440",
-      "anzahl": 30
+      "material": "klappbock",
+      "anzahl": 5
      },
      {
       "material": "winkel",
       "anzahl": 10
+     },
+     {
+      "material": "schrauben440",
+      "anzahl": 40
      },
      {
       "material": "scharnier",
@@ -262,15 +446,13 @@
      }
     ],
     "schritte": [
-     "10 Schenkel auf 700 mm und 5 Querstreben laut Stückliste ablängen.",
-     "Unteres Schenkel-Ende: Kappsäge auf 36° Gehrung – dort stoßen später zwei Böcke aneinander.",
-     "Spitze: Mit der Schmiege 18° zur Längskante anzeichnen und mit Stich- oder Handsäge schneiden (so steil kann die Kappsäge nicht). Tipp: eine Schablone aus Pappe machen und alle 10 Spitzen danach anzeichnen.",
-     "Fünf Böcke bauen: zwei Schenkel an der Spitze zusammenstoßen lassen, vorbohren und verschrauben, dann die Querstrebe vorne quer aufschrauben – sie hält den Bock stabil.",
-     "Alles schleifen und 2× lasieren, solange die Böcke noch einzeln sind.",
-     "Die fünf Böcke auf dem Boden zum Stern auslegen. Wo zwei Böcke unten aneinanderstoßen, hinten je zwei Winkel setzen.",
-     "Maße kontrollieren: Alle Spitzen gleich weit von der Mitte? Kleine Ungenauigkeiten gleichen die Winkel aus.",
-     "Stützlatte mit Scharnier hinten an der oberen Spitze befestigen, damit der Stern frei steht.",
-     "Lichterkette in engen Wicklungen um die Schenkel führen (wie beim Original-Stern). Zum Befestigen Kabeltacker mit runden Klammern oder Kabelclips – nie durchs Kabel tackern."
+     "5 Holzklappböcke kaufen (Bauhaus „Holzklappbock Standard“, 74 cm) – zusammengeklappt lassen.",
+     "Die Böcke 2× mit Lasur streichen, solange sie noch einzeln sind. Trocknen lassen.",
+     "Die fünf Böcke auf dem Boden zum Stern auslegen: Die Spitzen zeigen nach außen, die Füße benachbarter Böcke überlappen sich.",
+     "An jeder der fünf Überlappungen vorne und hinten je einen Winkel setzen (zusammen 10), mindestens 2 Schrauben 4×40 pro Winkelseite. Vorbohren!",
+     "Abstände kontrollieren: Alle Spitzen gleich weit von der Mitte? Erst dann alle Schrauben fest anziehen.",
+     "Stützlatte mit 18°-Schnitt unten mit dem Scharnier hinten an der oberen Spitze befestigen, damit der Stern frei steht.",
+     "Lichterkette in engen Wicklungen um alle Beine führen (wie beim Original). Mit Kabeltacker (runde Klammern) oder Kabelclips sichern – nie durchs Kabel tackern."
     ]
    }
   ]
@@ -1492,8 +1674,8 @@
     "name": "Zum Aufhängen",
     "masse": "ca. 34 × 36 × 34 cm, mit Kette",
     "preis": {
-     "ohne": 49,
-     "mit": 49
+     "ohne": 55,
+     "mit": 55
     },
     "stunden": 1.75,
     "licht": [],
@@ -1898,8 +2080,8 @@
     "name": "Mit Pfahl",
     "masse": "ca. 34 × 36 cm, ca. 1,40 m hoch",
     "preis": {
-     "ohne": 65,
-     "mit": 65
+     "ohne": 75,
+     "mit": 75
     },
     "stunden": 2.25,
     "licht": [],
