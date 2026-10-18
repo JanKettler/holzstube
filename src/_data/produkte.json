@@ -31,7 +31,7 @@
       "name": "Schenkel",
       "material": "dachlatte",
       "laenge": 700,
-      "zuschnitt": "Spitze: 18° zur Längskante (mit Stichsäge oder Handsäge, Schmiege benutzen) · unten: 36° Gehrung (Kappsäge)",
+      "zuschnitt": "Spitze mit Stichsäge, unten mit Kappsäge",
       "instanzen": [
        {
         "p": [
@@ -153,13 +153,14 @@
          -144.0
         ]
        }
-      ]
+      ],
+      "winkel": "Spitze 18° · unten 36°"
      },
      {
       "name": "Querstrebe (Bock)",
       "material": "dachlatte",
       "laenge": 405,
-      "zuschnitt": "beide Enden 18° Gehrung, gegenläufig (Trapez)",
+      "zuschnitt": "gegenläufig (Trapez)",
       "instanzen": [
        {
         "p": [
@@ -221,13 +222,14 @@
          -72.0
         ]
        }
-      ]
+      ],
+      "winkel": "18° / 18°"
      },
      {
       "name": "Stützlatte (Aufsteller)",
       "material": "dachlatte",
       "laenge": 965,
-      "zuschnitt": "unten 18° schräg, damit sie flach aufliegt",
+      "zuschnitt": "damit sie flach aufliegt",
       "instanzen": [
        {
         "p": [
@@ -241,7 +243,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "unten 18°"
      }
     ],
     "kleinteile": [
@@ -303,7 +306,7 @@
       "name": "Schenkel (vordere Lage)",
       "material": "dachlatte",
       "laenge": 340,
-      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "zuschnitt": "18° am Spitzen-Ende",
       "instanzen": [
        {
         "p": [
@@ -365,13 +368,14 @@
          -144.0
         ]
        }
-      ]
+      ],
+      "winkel": "18° / gerade"
      },
      {
       "name": "Schenkel (hintere Lage)",
       "material": "dachlatte",
       "laenge": 340,
-      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "zuschnitt": "18° am Spitzen-Ende",
       "instanzen": [
        {
         "p": [
@@ -433,7 +437,8 @@
          -180.0
         ]
        }
-      ]
+      ],
+      "winkel": "18° / gerade"
      }
     ],
     "kleinteile": [
@@ -476,7 +481,7 @@
       "name": "Schenkel (vordere Lage)",
       "material": "dachlatte",
       "laenge": 560,
-      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "zuschnitt": "18° am Spitzen-Ende",
       "instanzen": [
        {
         "p": [
@@ -538,13 +543,14 @@
          -144.0
         ]
        }
-      ]
+      ],
+      "winkel": "18° / gerade"
      },
      {
       "name": "Schenkel (hintere Lage)",
       "material": "dachlatte",
       "laenge": 560,
-      "zuschnitt": "Spitzen-Ende 18° Gehrung, anderes Ende gerade",
+      "zuschnitt": "18° am Spitzen-Ende",
       "instanzen": [
        {
         "p": [
@@ -606,13 +612,14 @@
          -180.0
         ]
        }
-      ]
+      ],
+      "winkel": "18° / gerade"
      },
      {
       "name": "Stützlatte (Aufsteller)",
       "material": "dachlatte",
       "laenge": 705,
-      "zuschnitt": "unten 18° schräg, damit sie flach aufliegt",
+      "zuschnitt": "damit sie flach aufliegt",
       "instanzen": [
        {
         "p": [
@@ -626,7 +633,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "unten 18°"
      }
     ],
     "kleinteile": [
@@ -685,7 +693,7 @@
       "name": "Seitenteil oben rechts (lang)",
       "material": "dachlatte",
       "laenge": 245,
-      "zuschnitt": "oben 22,5° Gehrung (Spitze), unten 22,5° waagerecht abschneiden",
+      "zuschnitt": "oben Spitze, unten waagerecht",
       "instanzen": [
        {
         "p": [
@@ -699,13 +707,14 @@
          112.5
         ]
        }
-      ]
+      ],
+      "winkel": "22,5° / 22,5°"
      },
      {
       "name": "Seitenteil",
       "material": "dachlatte",
       "laenge": 210,
-      "zuschnitt": "beide Enden 22,5° (Enden stehen waagerecht)",
+      "zuschnitt": "Enden stehen waagerecht",
       "instanzen": [
        {
         "p": [
@@ -767,13 +776,14 @@
          112.5
         ]
        }
-      ]
+      ],
+      "winkel": "22,5° / 22,5°"
      },
      {
       "name": "Bodenlatte",
       "material": "dachlatte",
       "laenge": 565,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -787,13 +797,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Standfuß (quer)",
       "material": "dachlatte",
       "laenge": 245,
-      "zuschnitt": "gerade, Kanten leicht brechen",
+      "zuschnitt": "Kanten leicht brechen",
       "instanzen": [
        {
         "p": [
@@ -819,7 +830,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      }
     ],
     "kleinteile": [
@@ -863,7 +875,7 @@
       "name": "Seitenteil oben rechts (lang)",
       "material": "dachlatte",
       "laenge": 490,
-      "zuschnitt": "oben 22,5° Gehrung (Spitze), unten 22,5° waagerecht abschneiden",
+      "zuschnitt": "oben Spitze, unten waagerecht",
       "instanzen": [
        {
         "p": [
@@ -877,13 +889,14 @@
          112.5
         ]
        }
-      ]
+      ],
+      "winkel": "22,5° / 22,5°"
      },
      {
       "name": "Seitenteil",
       "material": "dachlatte",
       "laenge": 420,
-      "zuschnitt": "beide Enden 22,5° (Enden stehen waagerecht)",
+      "zuschnitt": "Enden stehen waagerecht",
       "instanzen": [
        {
         "p": [
@@ -945,13 +958,14 @@
          112.5
         ]
        }
-      ]
+      ],
+      "winkel": "22,5° / 22,5°"
      },
      {
       "name": "Bodenlatte",
       "material": "dachlatte",
       "laenge": 985,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -965,13 +979,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Standfuß (quer)",
       "material": "dachlatte",
       "laenge": 490,
-      "zuschnitt": "gerade, Kanten leicht brechen",
+      "zuschnitt": "Kanten leicht brechen",
       "instanzen": [
        {
         "p": [
@@ -997,7 +1012,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      }
     ],
     "kleinteile": [
@@ -1053,7 +1069,7 @@
       "name": "Bodenlatte",
       "material": "dachlatte",
       "laenge": 800,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1067,13 +1083,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Wand",
       "material": "dachlatte",
       "laenge": 700,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1099,13 +1116,14 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Dachlatte",
       "material": "dachlatte",
       "laenge": 625,
-      "zuschnitt": "oben 45° Gehrung (First), unten gerade",
+      "zuschnitt": "45° am First",
       "instanzen": [
        {
         "p": [
@@ -1131,13 +1149,14 @@
          -45
         ]
        }
-      ]
+      ],
+      "winkel": "45° / gerade"
      },
      {
       "name": "Schornstein",
       "material": "dachlatte",
       "laenge": 160,
-      "zuschnitt": "unten 45° schräg (sitzt auf dem Dach)",
+      "zuschnitt": "sitzt auf dem Dach",
       "instanzen": [
        {
         "p": [
@@ -1151,13 +1170,14 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "unten 45°"
      },
      {
       "name": "Standfuß (quer)",
       "material": "dachlatte",
       "laenge": 300,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1183,7 +1203,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      }
     ],
     "kleinteile": [
@@ -1239,7 +1260,7 @@
       "name": "Kerzenbalken",
       "material": "kantholz58",
       "laenge": 500,
-      "zuschnitt": "gerade, danach flämmen und ausbürsten",
+      "zuschnitt": "danach flämmen und ausbürsten",
       "instanzen": [
        {
         "p": [
@@ -1253,7 +1274,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Teelicht",
@@ -1356,7 +1378,7 @@
       "name": "Kerzenbalken",
       "material": "kantholz58",
       "laenge": 600,
-      "zuschnitt": "gerade, danach flämmen und ausbürsten",
+      "zuschnitt": "danach flämmen und ausbürsten",
       "instanzen": [
        {
         "p": [
@@ -1370,7 +1392,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Stabkerze",
@@ -1481,7 +1504,7 @@
       "material": "leimholz",
       "laenge": 280,
       "breite": 300,
-      "zuschnitt": "rechteckig",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1495,13 +1518,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Randleiste lang",
       "material": "leiste20",
       "laenge": 300,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1527,13 +1551,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Randleiste kurz",
       "material": "leiste20",
       "laenge": 240,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1559,13 +1584,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Eckpfosten",
       "material": "leiste20",
       "laenge": 180,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1615,7 +1641,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Giebel",
@@ -1636,7 +1663,7 @@
         55.0
        ]
       ],
-      "zuschnitt": "Dreieck, Dachneigung ca. 38°",
+      "zuschnitt": "Dachneigung",
       "instanzen": [
        {
         "p": [
@@ -1662,7 +1689,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Dachplatte",
@@ -1670,7 +1698,7 @@
       "laenge": 360,
       "breite": 220,
       "farbe": "#4a3828",
-      "zuschnitt": "rechteckig, First-Kante 38° anschrägen · geflämmt (dunkel)",
+      "zuschnitt": "geflämmt (dunkel)",
       "instanzen": [
        {
         "p": [
@@ -1696,13 +1724,14 @@
          51.8
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Sitzstange",
       "material": "rundstab12",
       "laenge": 340,
-      "zuschnitt": "gerade, Enden rund schleifen",
+      "zuschnitt": "Enden rund schleifen",
       "instanzen": [
        {
         "p": [
@@ -1728,13 +1757,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Schornstein",
       "material": "dachlatte",
       "laenge": 90,
-      "zuschnitt": "unten 38° schräg, geflämmt",
+      "zuschnitt": "geflämmt",
       "farbe": "#4a3828",
       "instanzen": [
        {
@@ -1749,7 +1779,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Futtersilo (Glas)",
@@ -1778,7 +1809,7 @@
       "name": "Glashalter",
       "material": "leiste20",
       "laenge": 120,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1828,7 +1859,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      }
     ],
     "kleinteile": [
@@ -1878,7 +1910,7 @@
       "material": "leimholz",
       "laenge": 280,
       "breite": 300,
-      "zuschnitt": "rechteckig",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1892,13 +1924,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Randleiste lang",
       "material": "leiste20",
       "laenge": 300,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1924,13 +1957,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Randleiste kurz",
       "material": "leiste20",
       "laenge": 240,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -1956,13 +1990,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Eckpfosten",
       "material": "leiste20",
       "laenge": 180,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -2012,7 +2047,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Giebel",
@@ -2033,7 +2069,7 @@
         55.0
        ]
       ],
-      "zuschnitt": "Dreieck, Dachneigung ca. 38°",
+      "zuschnitt": "Dachneigung",
       "instanzen": [
        {
         "p": [
@@ -2059,7 +2095,8 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Dachplatte",
@@ -2067,7 +2104,7 @@
       "laenge": 360,
       "breite": 220,
       "farbe": "#4a3828",
-      "zuschnitt": "rechteckig, First-Kante 38° anschrägen · geflämmt (dunkel)",
+      "zuschnitt": "geflämmt (dunkel)",
       "instanzen": [
        {
         "p": [
@@ -2093,13 +2130,14 @@
          51.8
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Sitzstange",
       "material": "rundstab12",
       "laenge": 340,
-      "zuschnitt": "gerade, Enden rund schleifen",
+      "zuschnitt": "Enden rund schleifen",
       "instanzen": [
        {
         "p": [
@@ -2125,13 +2163,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Schornstein",
       "material": "dachlatte",
       "laenge": 90,
-      "zuschnitt": "unten 38° schräg, geflämmt",
+      "zuschnitt": "geflämmt",
       "farbe": "#4a3828",
       "instanzen": [
        {
@@ -2146,7 +2185,8 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Futtersilo (Glas)",
@@ -2175,7 +2215,7 @@
       "name": "Glashalter",
       "material": "leiste20",
       "laenge": 120,
-      "zuschnitt": "gerade",
+      "zuschnitt": "",
       "instanzen": [
        {
         "p": [
@@ -2225,13 +2265,14 @@
          0
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Pfahl",
       "material": "kantholz58",
       "laenge": 1500,
-      "zuschnitt": "gerade, oben sauber, unten leicht anfasen",
+      "zuschnitt": "unten leicht anfasen",
       "instanzen": [
        {
         "p": [
@@ -2245,13 +2286,14 @@
          90
         ]
        }
-      ]
+      ],
+      "winkel": "gerade"
      },
      {
       "name": "Stützklotz",
       "material": "kantholz58",
       "laenge": 150,
-      "zuschnitt": "beide Enden 45° (als Kopfband)",
+      "zuschnitt": "als Kopfband",
       "instanzen": [
        {
         "p": [
@@ -2277,7 +2319,8 @@
          45
         ]
        }
-      ]
+      ],
+      "winkel": "45° / 45°"
      }
     ],
     "kleinteile": [

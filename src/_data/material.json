@@ -1,26 +1,30 @@
 {
- "hinweis": "Einkauf bei Bauhaus. Preise sind Schätzwerte (Herbst 2026) – beim nächsten Einkauf die echten Preise hier eintragen. Holz selbst aussuchen: gerade, wenig Äste. Unbehandelte, sägeraue Fichte nehmen – keine grün imprägnierte Dachlatte.",
+ "hinweis": "Einkauf bei Bauhaus. Latten und Kantholz in 2 m oder 2,5 m (passt ins Auto) – die Einkaufsliste wählt automatisch die günstigere Länge. Preise aus deinen bisherigen Listen bzw. geschätzt – beim nächsten Einkauf die echten Preise hier eintragen. Holz selbst aussuchen: gerade, wenig Äste. Unbehandelte, sägeraue Fichte nehmen – keine grün imprägnierte Dachlatte.",
  "saegeschnitt": 4,
  "stundensatz": 10,
  "materialien": [
   {
    "id": "dachlatte",
-   "name": "Latte Fichte sägerau 24 × 48 mm, 3 m",
+   "name": "Latte Fichte sägerau 24 × 48 mm",
    "typ": "linear",
    "breite": 48,
    "dicke": 24,
-   "laenge": 3000,
-   "preis": 2.79,
+   "laenge": 2500,
+   "preis": 2.1,
+   "laenge2": 2000,
+   "preis2": 1.68,
    "farbe": "#c99a5b"
   },
   {
    "id": "kantholz58",
-   "name": "Kantholz Fichte sägerau 58 × 58 mm, 3 m",
+   "name": "Kantholz Fichte 58 × 58 mm",
    "typ": "linear",
    "breite": 58,
    "dicke": 58,
-   "laenge": 3000,
-   "preis": 9.99,
+   "laenge": 2500,
+   "preis": 8.38,
+   "laenge2": 2000,
+   "preis2": 6.7,
    "farbe": "#8a6a48"
   },
   {

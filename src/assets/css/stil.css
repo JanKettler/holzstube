@@ -472,3 +472,15 @@ ol.schrittliste li { margin-bottom: 8px; padding-left: 4px; }
   .produktliste { flex-direction: row; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
   .produktliste button { flex: none; min-width: 170px; }
 }
+
+/* Winkel in der Stückliste */
+.winkel {
+  display: inline-block; white-space: nowrap; font-weight: 700; font-size: 14px;
+  background: #fbe7c4; color: #7a4a0c; border: 1px solid #ecc983; border-radius: 6px; padding: 2px 8px;
+}
+.winkel.gerade { background: transparent; border-color: transparent; color: var(--tinte-leise, #5f665f); font-weight: 400; padding-left: 0; }
+.tab.stueckliste td { vertical-align: top; }
+.tab.stueckliste td.zahl { padding-left: 6px; padding-right: 6px; }
+.zs-nr { white-space: nowrap; }
+.zs-zeile { grid-template-columns: 46px 1fr 96px; }
+@media print { .winkel { border: 1.5px solid #000; background: none; color: #000; } }

@@ -77,6 +77,14 @@ export function sammleTeile(auftraege, produkte, M) {
   return zeilen;
 }
 
+// Winkel eines Teils als kurzer Text („22,5° / 22,5°“ oder „gerade“)
+export function winkelText(t) {
+  if (t.winkel) return t.winkel;
+  const g = String(t.zuschnitt || "").match(/\d+(?:,\d+)?\s*°/g);
+  return g ? g.map((x) => x.replace(/\s/g, "")).join(" / ") : "gerade";
+}
+export const winkelHtml = (w) => /°/.test(w || "") ? `<span class="winkel">${w}</span>` : `<span class="winkel gerade">${w || "gerade"}</span>`;
+
 export function stueckliste(auftraege, produkte, M) {
   const rows = new Map();
   for (const { p, v, n } of sammleTeile(auftraege, produkte, M)) {
@@ -85,9 +93,11 @@ export function stueckliste(auftraege, produkte, M) {
       const k = teilAnzahl(t) * n;
       const mat = M[t.material];
       const dims = mat.typ === "platte" ? `${t.laenge} × ${t.breite}` : `${t.laenge}`;
-      const key = `${t.material}|${dims}|${t.zuschnitt || ""}|${p.id}|${t.name}`;
-      const r = rows.get(key) || { produkt: p.name, variante: v.name, teil: t.name, material: mat.name, materialId: t.material,
-        masse: dims, zuschnitt: t.zuschnitt || "", anzahl: 0, profil: !!t.profil };
+      const d = teilMasse(t, M);
+      const key = `${t.material}|${dims}|${t.winkel || ""}|${t.zuschnitt || ""}|${p.id}|${v.id}|${t.name}`;
+      const r = rows.get(key) || { produkt: p.name, variante: p.varianten.length > 1 ? v.name : "", teil: t.name, material: mat.name, materialId: t.material,
+        masse: dims, laenge: Math.round(d.L), breite: Math.round(d.B), dicke: Math.round(d.D),
+        winkel: winkelText(t), zuschnitt: t.zuschnitt || "", anzahl: 0, profil: !!t.profil };
       r.anzahl += k;
       rows.set(key, r);
     }
@@ -95,18 +105,50 @@ export function stueckliste(auftraege, produkte, M) {
   return [...rows.values()];
 }
 
+// ---------- Rohlängen ----------
+// Ein lineares Material kann in zwei Längen gekauft werden (laenge/preis und laenge2/preis2).
+export function rohlaengen(m) {
+  const o = [];
+  if (+m.laenge > 0) o.push({ laenge: +m.laenge, preis: +m.preis || 0 });
+  if (+m.laenge2 > 0) o.push({ laenge: +m.laenge2, preis: +m.preis2 || 0 });
+  return o.sort((a, b) => a.laenge - b.laenge);
+}
+const meterText = (mm) => `${(mm / 1000).toLocaleString("de-DE", { maximumFractionDigits: 2 })} m`;
+
 // ---------- Zuschnitt ----------
-function zuschnittLinear(stuecke, laenge, saege) {
+function packen(stuecke, laenge, saege) {
   const sorted = [...stuecke].sort((a, b) => b.l - a.l);
   const stangen = [];
-  const zuLang = [];
   for (const s of sorted) {
-    if (s.l > laenge) { zuLang.push(s); continue; }
     let st = stangen.find((x) => x.rest >= s.l + (x.schnitte.length ? saege : 0));
-    if (!st) { st = { schnitte: [], rest: laenge }; stangen.push(st); }
+    if (!st) { st = { schnitte: [], rest: laenge, laenge }; stangen.push(st); }
     st.rest -= s.l + (st.schnitte.length ? saege : 0);
     st.schnitte.push(s);
   }
+  return stangen;
+}
+
+// Probiert alle Rohlängen (und eine Mischung) und nimmt die günstigste Variante
+function zuschnittLinear(stuecke, optionen, saege) {
+  const max = optionen[optionen.length - 1];
+  const zuLang = stuecke.filter((s) => s.l > max.laenge);
+  const ok = stuecke.filter((s) => s.l <= max.laenge);
+  const preisVon = (l) => (optionen.find((o) => o.laenge === l) || max).preis;
+  const kandidaten = [];
+  for (const o of optionen) {
+    if (ok.some((s) => s.l > o.laenge)) continue;
+    kandidaten.push(packen(ok, o.laenge, saege));
+  }
+  // Mischung: mit der langen Stange packen, dann jede Stange auf die kürzeste passende Länge kürzen
+  const misch = packen(ok, max.laenge, saege).map((st) => {
+    const benutzt = st.laenge - st.rest;
+    const passend = optionen.find((o) => o.laenge >= benutzt) || max;
+    return { ...st, laenge: passend.laenge, rest: passend.laenge - benutzt };
+  });
+  kandidaten.push(misch);
+  const bewertung = (k) => k.reduce((s, st) => s + preisVon(st.laenge), 0) * 1000 + k.reduce((s, st) => s + st.rest, 0) / 1e6;
+  const stangen = kandidaten.sort((a, b) => bewertung(a) - bewertung(b))[0] || [];
+  stangen.sort((a, b) => b.laenge - a.laenge);
   return { stangen, zuLang };
 }
 
@@ -197,12 +239,21 @@ export function einkaufsliste(auftraege, produkte, materialDaten) {
   const zuschnitt = { linear: [], platten: [] };
   for (const [id, stuecke] of Object.entries(linear)) {
     const m = M[id];
-    const z = zuschnittLinear(stuecke, m.laenge, saege);
+    const opt = rohlaengen(m);
+    if (!opt.length) continue;
+    const z = zuschnittLinear(stuecke, opt, saege);
     const meter = stuecke.reduce((s, x) => s + x.l, 0) / 1000;
-    posten.push({ id, name: m.name, benoetigt: `${meter.toFixed(1).replace(".", ",")} m in ${stuecke.length} Stücken`,
-      kaufen: z.stangen.length + z.zuLang.length, einheit: `Stück à ${(m.laenge / 1000).toString().replace(".", ",")} m`,
-      preis: (z.stangen.length + z.zuLang.length) * m.preis, warnung: z.zuLang.length ? `${z.zuLang.length} Teil(e) länger als ${m.laenge} mm` : "" });
-    zuschnitt.linear.push({ id, name: m.name, laenge: m.laenge, ...z });
+    const maxL = opt[opt.length - 1];
+    const proLaenge = {};
+    for (const st of z.stangen) proLaenge[st.laenge] = (proLaenge[st.laenge] || 0) + 1;
+    if (z.zuLang.length) proLaenge[maxL.laenge] = (proLaenge[maxL.laenge] || 0) + z.zuLang.length;
+    Object.keys(proLaenge).map(Number).sort((a, b) => b - a).forEach((l, i) => {
+      const o = opt.find((x) => x.laenge === l) || maxL;
+      posten.push({ id, name: m.name, benoetigt: i === 0 ? `${meter.toFixed(1).replace(".", ",")} m in ${stuecke.length} Stücken` : "",
+        kaufen: proLaenge[l], einheit: `Stück à ${meterText(l)}`, preis: proLaenge[l] * o.preis,
+        warnung: i === 0 && z.zuLang.length ? `${z.zuLang.length} Teil(e) länger als ${meterText(maxL.laenge)} – stückeln oder Sonderlänge kaufen` : "" });
+    });
+    zuschnitt.linear.push({ id, name: m.name, laenge: maxL.laenge, ...z });
   }
   for (const [id, stuecke] of Object.entries(platte)) {
     const m = M[id];
@@ -244,7 +295,11 @@ export function kostenVariante(v, materialDaten, licht) {
     const m = M[t.material];
     if (t.nurModell || !m) continue;
     const k = teilAnzahl(t);
-    if (m.typ === "linear") holz += (k * t.laenge / m.laenge) * m.preis * 1.1;
+    if (m.typ === "linear") {
+      const opt = rohlaengen(m).filter((o) => o.laenge >= t.laenge);
+      const best = (opt.length ? opt : rohlaengen(m).slice(-1)).sort((a, b) => a.preis / a.laenge - b.preis / b.laenge)[0];
+      if (best) holz += (k * t.laenge / best.laenge) * best.preis * 1.1;
+    }
     else if (m.typ === "platte") {
       const d = teilMasse(t, M);
       holz += (k * d.L * d.B / (m.laenge * m.breite)) * m.preis * 1.25;
@@ -379,9 +434,10 @@ export function zuschnittSVG(z) {
         x += s.l + 4;
         return r;
       }).join("");
-      return `<div class="zs-zeile"><span class="zs-nr">${i + 1}</span><svg viewBox="-2 -2 ${L.laenge + 4} 64" preserveAspectRatio="none" class="zs-stange"><rect x="0" y="0" width="${L.laenge}" height="60" class="zs-rest"/>${rects}</svg><span class="zs-restlabel">Rest ${Math.round(st.rest)} mm</span></div>`;
+      const sl = st.laenge || L.laenge;
+      return `<div class="zs-zeile"><span class="zs-nr">${meterText(sl)}</span><svg viewBox="-2 -2 ${L.laenge + 4} 64" preserveAspectRatio="none" class="zs-stange"><rect x="0" y="0" width="${sl}" height="60" class="zs-rest"/>${rects}</svg><span class="zs-restlabel">Rest ${Math.round(st.rest)} mm</span></div>`;
     }).join("");
-    teile.push(`<section class="zs-block"><h4>${L.name}</h4><p class="leise">${L.stangen.length} × ${L.laenge} mm · Schnittbreite eingerechnet</p>${zeilen}${L.zuLang.length ? `<p class="warnung">Zu lang für eine Stange: ${L.zuLang.map((s) => s.label + " " + s.l + " mm").join(", ")}</p>` : ""}</section>`);
+    teile.push(`<section class="zs-block"><h4>${L.name}</h4><p class="leise">${(() => { const c = {}; L.stangen.forEach((st) => (c[st.laenge] = (c[st.laenge] || 0) + 1)); return Object.keys(c).sort((a, b) => b - a).map((l) => `${c[l]} × ${meterText(+l)}`).join(" + "); })()} · Schnittbreite eingerechnet</p>${zeilen}${L.zuLang.length ? `<p class="warnung">Zu lang für eine Stange: ${L.zuLang.map((s) => s.label + " " + s.l + " mm").join(", ")}</p>` : ""}</section>`);
   }
   for (const P of z.platten) {
     const svgs = P.platten.map((pl, i) => {
@@ -403,7 +459,7 @@ export function einkaufCSV(ek) {
 
 export function einkaufText(ek) {
   return ["Einkaufsliste – Jans Holzstube", ""]
-    .concat(ek.posten.map((p) => `☐ ${p.kaufen} × ${p.name} (${p.einheit}) – ${p.benoetigt}`))
+    .concat(ek.posten.map((p) => `☐ ${p.kaufen} × ${p.name} (${p.einheit})${p.benoetigt ? ` – ${p.benoetigt}` : ""}`))
     .concat(["", `Geschätzt: ${euro(ek.summe)}`]).join("\n");
 }
 

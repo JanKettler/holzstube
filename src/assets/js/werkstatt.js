@@ -1,7 +1,7 @@
 // Jans Holzstube – Werkstatt: Planen, Einkauf, Baupläne, Produkte, Material, Einstellungen.
 import {
   euro, materialMap, teilAnzahl, teilMasse, stueckliste, einkaufsliste, kostenVariante,
-  zeichnungSVG, zuschnittSVG, einkaufCSV, einkaufText, findeVariante,
+  zeichnungSVG, zuschnittSVG, einkaufCSV, einkaufText, findeVariante, winkelText, winkelHtml,
 } from "./bauplan.js";
 import { GitHub } from "./github.js";
 
@@ -336,6 +336,18 @@ function tabPlanen(el) {
   $("#zum-einkauf").addEventListener("click", () => zeigeTab("einkauf"));
 }
 
+// Stückliste im Stil der Fertigmaße: Pos · Anzahl · Teil · Material · L · B · D · Winkel · Hinweis
+function stuecklisteTabelle(zeilen, mitProdukt) {
+  return `<table class="tab stueckliste"><thead><tr><th class="zahl">Pos.</th><th class="zahl">Anz.</th><th>Teil</th>
+    <th class="zahl">Länge</th><th class="zahl">Breite</th><th class="zahl">Dicke</th><th>Winkel</th><th>Hinweis</th></tr></thead>
+    <tbody>${zeilen.map((r, i) => `<tr>
+      <td class="zahl leise">${i + 1}</td><td class="zahl"><b>${r.anzahl}</b></td>
+      <td><b>${esc(r.teil)}</b>${mitProdukt ? `<div class="leise" style="font-size:12.5px">${esc(r.produkt)}${r.variante ? " " + esc(r.variante) : ""}</div>` : ""}<div class="leise" style="font-size:12.5px">${esc(r.material)}</div></td>
+      <td class="zahl"><b>${r.laenge}</b></td><td class="zahl">${r.breite}</td><td class="zahl">${r.dicke}</td>
+      <td>${winkelHtml(esc(r.winkel))}</td><td class="leise" style="font-size:14px">${esc(r.zuschnitt)}${r.profil ? " · Form aussägen" : ""}</td></tr>`).join("")}</tbody></table>
+    <p class="leise" style="font-size:13px;margin:10px 0 0">Alle Maße in mm. Winkel: erstes Ende / zweites Ende.</p>`;
+}
+
 // ======================================================================
 // Einkauf & Zuschnitt
 // ======================================================================
@@ -368,9 +380,8 @@ function tabEinkauf(el) {
     </div>
     <h2>Zuschnitt</h2>
     <div class="panel">${zuschnittSVG(ek.zuschnitt)}</div>
-    <h2>Stückliste</h2>
-    <div class="panel tab-scroll"><table class="tab"><thead><tr><th>Produkt</th><th>Teil</th><th>Maß (mm)</th><th class="zahl">Anzahl</th><th>Zuschnitt</th></tr></thead>
-      <tbody>${sl.map((r) => `<tr><td>${esc(r.produkt)} <span class="leise">${esc(r.variante)}</span></td><td>${esc(r.teil)}<div class="leise" style="font-size:12.5px">${esc(r.material)}</div></td><td>${esc(r.masse)}</td><td class="zahl"><b>${r.anzahl}</b></td><td class="leise" style="font-size:14px">${esc(r.zuschnitt)}</td></tr>`).join("")}</tbody></table></div>`;
+    <h2>Stückliste (Fertigmaße)</h2>
+    <div class="panel tab-scroll">${stuecklisteTabelle(sl, true)}</div>`;
   $("#drucken").addEventListener("click", () => window.print());
   $("#csv").addEventListener("click", () => herunterladen("einkaufsliste.csv", einkaufCSV(ek), "text/csv;charset=utf-8"));
   $("#teilen").addEventListener("click", async () => {
@@ -421,13 +432,8 @@ function tabBauplan(el) {
       <div class="kachel"><div class="zahl">${v.preis.ohne} €${hatLicht ? ` / ${v.preis.mit} €` : ""}</div><div class="was">Dein Preis</div></div>
     </div>
     <div class="panel tab-scroll">
-      <h3>Stückliste (1 Stück)</h3>
-      <table class="tab"><thead><tr><th>Teil</th><th>Material</th><th>Maß (mm)</th><th class="zahl">Anzahl</th><th>Zuschnitt</th></tr></thead>
-      <tbody>${teile.map((t) => {
-        const m = M[t.material] || {};
-        const mass = m.typ === "platte" ? `${t.laenge} × ${t.breite}` : `${t.laenge}`;
-        return `<tr><td><b>${esc(t.name)}</b></td><td class="leise" style="font-size:14px">${esc(m.name || t.material)}</td><td>${esc(mass)}</td><td class="zahl"><b>${teilAnzahl(t)}</b></td><td style="font-size:14px">${esc(t.zuschnitt || "")}</td></tr>`;
-      }).join("")}</tbody></table>
+      <h3>Stückliste (Fertigmaße, 1 Stück)</h3>
+      ${stuecklisteTabelle(stueckliste([{ produkt: p.id, variante: v.id, anzahl: 1 }], S.produkte, M), false)}
     </div>
     <div class="raster-2" style="gap:0 20px">
       <div class="panel"><h3>Kleinteile</h3>${kl.length ? `<ul style="margin:0;padding-left:1.2em">${kl.map((k) => `<li>${k.anzahl} × ${esc(M[k.material].name)}</li>`).join("")}</ul>` : `<p class="leise">Keine.</p>`}
@@ -510,7 +516,10 @@ function teilKarte(t, ti, vi) {
         <button class="knopf-x" type="button" data-aktion="teil-weg" title="Teil löschen">×</button>
       </div>
     </div>
-    <div class="feld" style="margin:10px 0 0"><label>Zuschnitt / Winkel</label><input type="text" data-pfad="${pf}.zuschnitt" value="${esc(t.zuschnitt || "")}" placeholder="z. B. beide Enden 22,5°"></div>
+    <div class="raster-2" style="margin-top:10px;gap:0 10px">
+      <div class="feld" style="margin:0"><label>Winkel</label><input type="text" data-pfad="${pf}.winkel" value="${esc(t.winkel || "")}" placeholder="z. B. 22,5° / 22,5° oder gerade"></div>
+      <div class="feld" style="margin:0"><label>Hinweis zum Zuschnitt</label><input type="text" data-pfad="${pf}.zuschnitt" value="${esc(t.zuschnitt || "")}" placeholder="z. B. Enden stehen waagerecht"></div>
+    </div>
     ${instanzenHtml(t, pf)}
     <details data-key="${pf}-form" ${t.profil ? "open" : ""}><summary>Form (nur Platten, für ausgesägte Formen)</summary>
       <p class="leise" style="font-size:13px">Eckpunkte als Liste in mm, Mitte = 0/0, z. B. <code>[[-300,-500],[300,-500],[0,500]]</code> für ein Dreieck. Leer lassen für ein Rechteck.</p>
@@ -704,7 +713,7 @@ function tabProdukte(el) {
       case "var-weg":
         if (!confirm(`Variante „${vv.name}“ löschen?`)) return;
         p.varianten.splice(S.varianteIdx, 1); S.varianteIdx = 0; break;
-      case "teil-neu": vv.teile.push({ name: "Neues Teil", material: S.material.materialien.find((m) => m.typ === "linear")?.id || "", laenge: 500, zuschnitt: "gerade", anzahl: 1, instanzen: [] }); break;
+      case "teil-neu": vv.teile.push({ name: "Neues Teil", material: S.material.materialien.find((m) => m.typ === "linear")?.id || "", laenge: 500, winkel: "gerade", zuschnitt: "", anzahl: 1, instanzen: [] }); break;
       case "deko-neu": vv.teile.push({ name: "Kerze", form: "zylinder", nurModell: true, durchmesser: 22, hoehe: 150, farbe: "#f3ead8", flamme: true, instanzen: [{ p: [0, 75, 0], r: [0, 0, 0] }] }); break;
       case "teil-weg": if (!confirm("Teil löschen?")) return; vv.teile.splice(teilIdx(), 1); break;
       case "teil-kopie": { const i = teilIdx(); vv.teile.splice(i + 1, 0, kopie(vv.teile[i])); break; }
@@ -767,7 +776,9 @@ function materialFelder(m, i) {
   const pf = `materialien.${i}`;
   const f = (k, label, step = "1") => `<div class="feld"><label>${label}</label><input type="number" inputmode="decimal" step="${step}" data-typ="zahl" data-pfad="${pf}.${k}" value="${m[k] ?? ""}"></div>`;
   const spez = {
-    linear: f("breite", "Breite mm") + f("dicke", "Dicke mm") + f("laenge", "Länge mm"),
+    linear: f("breite", "Breite mm") + f("dicke", "Dicke mm") 
+      + f("laenge", "Rohlänge 1 (mm)") + f("preis", "Preis Länge 1 (€)", "0.01") + `<span></span>`
+      + f("laenge2", "Rohlänge 2 (mm, optional)") + f("preis2", "Preis Länge 2 (€)", "0.01"),
     platte: f("laenge", "Länge mm") + f("breite", "Breite mm") + f("dicke", "Dicke mm"),
     stueck: f("packung", "Stück pro Packung"),
     lasur: f("liter", "Liter pro Dose", "0.05") + f("ergiebigkeit", "m² pro Liter") + f("anstriche", "Anstriche"),
@@ -776,7 +787,7 @@ function materialFelder(m, i) {
     <div class="teil-oben" style="grid-template-columns:2.4fr 1.4fr 1fr auto">
       <div class="feld"><label>Bezeichnung</label><input type="text" data-pfad="${pf}.name" value="${esc(m.name)}"></div>
       <div class="feld"><label>Art</label><select data-pfad="${pf}.typ" data-neu>${Object.entries(TYPEN).map(([k, n]) => `<option value="${k}" ${m.typ === k ? "selected" : ""}>${n}</option>`).join("")}</select></div>
-      <div class="feld"><label>Preis €</label><input type="number" inputmode="decimal" step="0.01" data-typ="zahl" data-pfad="${pf}.preis" value="${m.preis ?? 0}"></div>
+      ${m.typ === "linear" ? "<span></span>" : `<div class="feld"><label>Preis €</label><input type="number" inputmode="decimal" step="0.01" data-typ="zahl" data-pfad="${pf}.preis" value="${m.preis ?? 0}"></div>`}
       <button class="knopf-x" type="button" data-aktion="mat-weg" title="Löschen">×</button>
     </div>
     <div class="raster-3" style="margin-top:10px">${spez}</div>
@@ -803,7 +814,7 @@ function tabMaterial(el) {
       if (!name) return;
       let id = slug(name), k = 2;
       while (M[id]) id = `${slug(name)}-${k++}`;
-      S.material.materialien.push({ id, name, typ: "linear", breite: 48, dicke: 24, laenge: 2500, preis: 0 });
+      S.material.materialien.push({ id, name, typ: "linear", breite: 48, dicke: 24, laenge: 2500, preis: 0, laenge2: 2000, preis2: 0 });
     } else if (b.dataset.aktion === "mat-weg") {
       const i = Number(b.closest("[data-mat]").dataset.mat);
       const m = S.material.materialien[i];
